@@ -1,0 +1,388 @@
+/* About Page Styles */
+
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.about-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-title-accent {
+    color: rgb(255, 187, 0);
+}
+
+.about-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Mission Section */
+.mission-section {
+    background: #fff;
+    border-radius: 24px;
+    padding: 60px;
+    margin-bottom: 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.mission-visual {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #000 0%, #333 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission-logo {
+    font-family: 'Goldman', sans-serif;
+    color: rgb(255, 187, 0);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.mission-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.mission-text {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.mission-highlight {
+    color: rgb(255, 187, 0);
+    font-weight: 600;
+}
+
+/* Values Section */
+.values-section {
+    margin-bottom: 80px;
+}
+
+.values-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.value-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    border-color: rgba(255, 187, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-icon.minimal {
+    background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #f39c12 100%);
+}
+
+.value-icon.quality {
+    background: linear-gradient(135deg, #333 0%, #000 100%);
+}
+
+.value-icon.community {
+    background: linear-gradient(135deg, #666 0%, #444 100%);
+}
+
+.value-icon-text {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.value-icon.minimal .value-icon-text {
+    color: #000;
+}
+
+.value-icon.quality .value-icon-text,
+.value-icon.community .value-icon-text {
+    color: rgb(255, 187, 0);
+}
+
+.value-name {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.value-description {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Story Section */
+.story-section {
+    background: #000;
+    color: #fff;
+    border-radius: 24px;
+    padding: 60px;
+    margin-bottom: 80px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2.5rem;
+    color: rgb(255, 187, 0);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.story-text {
+    font-family: 'Roboto', sans-serif;
+    color: #ccc;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.story-visual {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.story-year {
+    font-family: 'Goldman', sans-serif;
+    color: rgb(255, 187, 0);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.story-label {
+    font-family: 'Roboto', sans-serif;
+    color: #aaa;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.team-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-avatar {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-avatar-initial {
+    font-family: 'Goldman', sans-serif;
+    color: rgb(255, 187, 0);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.team-name {
+    font-family: 'Goldman', sans-serif;
+    color: #000;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.team-role {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 187, 0);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.team-description {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+    background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #f39c12 100%);
+    border-radius: 24px;
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-cta-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-cta-text {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-cta-button {
+    background: #000;
+    color: rgb(255, 187, 0);
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-cta-button:hover {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mission-grid,
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mission-section {
+        padding: 40px 30px;
+    }
+    
+    .story-section {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .mission-section,
+    .story-section {
+        padding: 30px 20px;
+    }
+}

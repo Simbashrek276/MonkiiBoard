@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Sign Up Modal Styles */
+#register-modal .login-modal-content {
+    backdrop-filter: blur(10px);
+    width: 400px;
+    height: 520px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px white;
+    overflow: hidden;
+}
+
+#register-modal .close-modal {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.2s;
+}
+
+#register-modal .close-modal:hover {
+    color: rgb(255, 187, 0);
+}
+
+#register-modal .login-text {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+#register-modal .login-form {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Name fields container */
+#register-modal .name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+#register-modal .name-fields input {
+    flex: 1;
+}
+
+#register-modal .login-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    border-radius: 6px;
+    outline: none;
+    font-weight: 400;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#register-modal .login-form input:focus {
+    border-color: rgb(255, 187, 0);
+    box-shadow: 0 0 0 2px rgba(255, 187, 0, 0.2);
+}
+
+#register-modal .login-form ::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+#register-modal .login-form input:focus::placeholder {
+    color: transparent;
+    font-size: 0.9rem;
+}
+
+/* Password wrapper styles */
+#register-modal .password-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#register-modal .password-wrapper input {
+    width: 100%;
+    padding-right: 44px;
+    box-sizing: border-box;
+}
+
+#register-modal .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+#register-modal .eye-icon:hover {
+    opacity: 1;
+}
+
+#register-modal .login-form button {
+    padding: 12px;
+    background: rgb(255, 187, 0);
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+#register-modal .login-form button:hover {
+    background: rgb(22, 21, 21);
+    color: rgb(255, 187, 0);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#register-modal .login-form button:active {
+    transform: translateY(0);
+}
+
+#register-modal .login-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#register-modal .register-link {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #fff;
+}
+
+#register-modal .register-link a {
+    color: rgb(255, 187, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+    transition: color 0.2s;
+}
+
+#register-modal .register-link a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Password strength indicator */
+#register-modal .password-strength {
+    font-size: 0.75rem;
+    margin-top: -10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#register-modal .password-strength.weak {
+    color: #ff4444;
+}
+
+#register-modal .password-strength.medium {
+    color: #ffbb33;
+}
+
+#register-modal .password-strength.strong {
+    color: #00C851;
+}

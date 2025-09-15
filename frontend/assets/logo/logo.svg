@@ -1,0 +1,33 @@
+<svg width="200" height="200">
+<g>
+<circle cx="140" cy="100" r="30" fill="#632717"/>
+<circle cx="60" cy="100" r="30" fill="#632717"/>
+<circle cx="140" cy="100" r="23" fill="#dea75b"/>
+<circle cx="60" cy="100" r="23" fill="#dea75b"/>
+<rect x="45" y="45" width="110" height="110" rx="20" ry="20" fill="#632717"/>
+
+<circle cx="100" cy="120" r="30" fill="#dea75b"/>
+<circle cx="80" cy="85" r="30" fill="#dea75b"/>
+<circle cx="120" cy="85" r="30" fill="#dea75b"/>
+
+
+<line x1="80" y1="80" x2="100" y2="100" stroke="gold" stroke-width="8" stroke-linecap="round"/>
+<line x1="80" y1="80" x2="100" y2="100" stroke="yellow" stroke-width="8" stroke-linecap="round" transform="rotate(90, 100, 100)"/>
+<line x1="80" y1="80" x2="80" y2="115" stroke="yellow" stroke-width="8" stroke-linecap="round"/>
+<line x1="120" y1="80" x2="120" y2="115" stroke="gold" stroke-width="8" stroke-linecap="round"/>
+
+<line x1="65" y1="65" x2="135" y2="65" stroke="yellow" stroke-width="5" stroke-linecap="round"/>
+<line x1="65" y1="135" x2="135" y2="135" stroke="gold" stroke-width="5" stroke-linecap="round"/>
+<line x1="135" y1="65" x2="135" y2="135" stroke="gold" stroke-width="5" stroke-linecap="round"/>
+<line x1="65" y1="65" x2="65" y2="135" stroke="yellow" stroke-width="5" stroke-linecap="round"/>
+
+<line x1="55" y1="65" x2="45" y2="65" stroke="yellow" stroke-width="3"/>
+<line x1="55" y1="135" x2="45" y2="135" stroke="gold" stroke-width="3"/>
+<line x1="155" y1="135" x2="145" y2="135" stroke="gold" stroke-width="3"/>
+<line x1="155" y1="65" x2="145" y2="65" stroke="yellow" stroke-width="3"/>
+<line x1="55" y1="65" x2="55" y2="135" stroke="gold" stroke-width="3" stroke-linecap="round"/>
+<line x1="145" y1="65" x2="145" y2="135" stroke="yellow" stroke-width="3" stroke-linecap="round"/>
+<line x1="49" y1="55" x2="151" y2="55" stroke="yellow" stroke-width="3" stroke-linecap="round"/>
+<line x1="49" y1="145" x2="151" y2="145" stroke="gold" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg>

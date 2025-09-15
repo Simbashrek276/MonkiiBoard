@@ -1,0 +1,100 @@
+.header {
+    height: 53px;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: transparent;
+    transition: background 1s, backdrop-filter 0.4s;
+}
+
+.header:hover {
+    background: rgb(215, 172, 13);
+    backdrop-filter: none;
+}
+
+.left-section {
+    display: flex;
+    width: 460px;
+    justify-content: center;
+}
+
+.logo-holder {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.logo {
+    top: 5px;
+    height: 53px;
+}
+
+.middle-section {
+    width: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-buttons-holder {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.menu-btn {
+    width: 117px;
+    height: 53px;
+    border: none; 
+    background: transparent;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.7s, color 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 550;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.menu-btn:hover, .menu-btn:focus {
+    background: #ffffff;
+    color: #000000;
+    z-index: 1;
+}
+
+.right-section {
+    width: 420px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.login-holder {
+    background: none;
+    border: none; 
+    cursor: pointer; 
+    margin-left: 20px; 
+}
+
+.login {
+    height: 70px;
+
+    position: relative;
+    top: -10px;
+}
+
+

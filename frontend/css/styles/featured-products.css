@@ -1,0 +1,293 @@
+/* Featured Products Section */
+.featured-products-section {
+    background: #f8f8f8;
+    padding: 120px 0;
+}
+
+.featured-products-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.featured-products-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.featured-products-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.featured-products-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-weight: 300;
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.featured-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.featured-product-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s ease;
+    border: 3px solid transparent;
+    position: relative;
+}
+
+.featured-product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 187, 0, 0.3);
+}
+
+.featured-product-image {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.08) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.08) 75%);
+    background-size: 30px 30px;
+    z-index: 1;
+}
+
+.featured-product-image.keyboard {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+.featured-product-image.pcb {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+}
+
+.featured-product-image.accessory {
+    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+}
+
+.featured-product-label {
+    font-family: 'Goldman', sans-serif;
+    color: #fff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 2;
+    position: relative;
+    font-weight: 600;
+}
+
+.featured-product-content {
+    padding: 45px 35px;
+    text-align: center;
+}
+
+.featured-product-name {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.7rem;
+    color: #000;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.featured-product-description {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.featured-product-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.featured-product-price {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(255, 187, 0);
+}
+
+.featured-product-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.color-option {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.color-option.black { background: #333; }
+.color-option.white { background: #fff; border-color: #ddd; }
+.color-option.gold { background: rgb(255, 187, 0); }
+
+.color-option:hover {
+    transform: scale(1.2);
+    border-color: rgba(255, 187, 0, 0.6);
+}
+
+.featured-product-spec {
+    font-family: 'Roboto', sans-serif;
+    color: #999;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.featured-product-btn {
+    background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #f39c12 100%);
+    color: #000;
+    border: none;
+    padding: 16px 32px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 100%;
+    font-weight: 600;
+}
+
+.featured-product-btn:hover {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 187, 0, 0.4);
+}
+
+.featured-products-cta {
+    text-align: center;
+}
+
+.featured-products-view-all {
+    background: transparent;
+    color: #000;
+    border: 3px solid #000;
+    padding: 18px 45px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-products-view-all::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.featured-products-view-all:hover::before {
+    left: 0;
+}
+
+.featured-products-view-all:hover {
+    color: rgb(255, 187, 0);
+    border-color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .featured-products-grid {
+        gap: 40px;
+    }
+    
+    .featured-products-container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-products-section {
+        padding: 80px 0;
+    }
+    
+    .featured-products-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .featured-products-title {
+        font-size: 2.2rem;
+    }
+    
+    .featured-product-content {
+        padding: 35px 25px;
+    }
+    
+    .featured-products-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-products-title {
+        font-size: 1.8rem;
+    }
+    
+    .featured-products-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .featured-product-name {
+        font-size: 1.4rem;
+    }
+    
+    .featured-product-price {
+        font-size: 1.6rem;
+    }
+}

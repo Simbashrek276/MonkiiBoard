@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Goldman:wght@400;700&display=swap');
+
+
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-modal-content {
+    backdrop-filter: blur(10px);
+    width: 400px;
+    height: 420px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px white;
+    overflow: hidden;
+}
+
+
+.login-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; 
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.login-text,
+.login-form,
+.close-modal {
+    position: relative;
+    z-index: 1;
+}
+
+.close-modal {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: rgb(255, 187, 0);
+}
+
+
+.login-text {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.reset-password-text {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.login-form {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    border-radius: 6px;
+    outline: none;
+    font-weight: 400;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:focus {
+    border-color: rgb(255, 187, 0);
+    box-shadow: 0 0 0 2px rgba(255, 187, 0, 0.2);
+}
+
+.login-form ::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.login-form input:focus::placeholder {
+    color: transparent;
+    font-size: 0.9rem;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 44px; 
+    box-sizing: border-box;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.eye-icon:hover {
+    opacity: 1;
+}
+
+.password-options {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -45px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #fff;
+    z-index: 2;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.remember-me input[type="checkbox"] {
+    width: auto;
+    min-width: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.forgot-password {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login-form button {
+    position: relative;
+    bottom: -20px;
+    padding: 12px;
+    background: rgb(255, 187, 0);
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.login-form button:hover {
+    background: rgb(22, 21, 21);
+    color: rgb(255, 187, 0);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.login-form button:active {
+    transform: translateY(0);
+}
+
+.register-link {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #fff;
+}
+
+.register-link a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
