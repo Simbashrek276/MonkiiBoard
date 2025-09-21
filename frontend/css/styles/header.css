@@ -1,5 +1,5 @@
 .header {
-    height: 53px;
+    height: 70px;
     z-index: 100;
     display: flex;
     flex-direction: row;
@@ -28,12 +28,14 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100px;
+    height: 100%;
 }
 
 .logo {
-    top: 5px;
-    height: 53px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .middle-section {
@@ -53,12 +55,12 @@
 }
 
 .menu-btn {
-    width: 117px;
-    height: 53px;
+    width: 130px;
+    height: 70px;
     border: none; 
     background: transparent;
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-family: inherit;
     cursor: pointer;
     transition: background 0.7s, color 0.7s;
@@ -87,14 +89,17 @@
     background: none;
     border: none; 
     cursor: pointer; 
-    margin-left: 20px; 
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .login {
-    height: 70px;
-
-    position: relative;
-    top: -10px;
+    height: 75px;
+    width: auto;
+    object-fit: contain;
 }
 
 

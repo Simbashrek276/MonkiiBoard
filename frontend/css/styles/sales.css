@@ -7,7 +7,7 @@
 }
 
 .sales-container {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 100px;
 }
@@ -43,7 +43,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 .sale-product-card {
@@ -217,31 +217,6 @@
 .sale-btn-secondary:hover {
     background: rgb(255, 187, 0);
     color: #000;
-}
-
-.sales-cta {
-    text-align: center;
-}
-
-.sales-view-all {
-    background: transparent;
-    color: rgb(255, 187, 0);
-    border: 2px solid rgb(255, 187, 0);
-    padding: 18px 40px;
-    border-radius: 30px;
-    font-family: 'Goldman', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.sales-view-all:hover {
-    background: rgb(255, 187, 0);
-    color: #000;
-    transform: scale(1.05);
 }
 
 /* Responsive Design */
