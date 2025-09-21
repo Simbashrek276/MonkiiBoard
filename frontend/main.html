@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/styles/login.css">
         <link rel="stylesheet" href="css/styles/signup.css">
         <link rel="stylesheet" href="css/styles/resetpassword.css">
+        <link rel="stylesheet" href="css/styles/sales.css">
         <link rel="stylesheet" href="css/styles/showcase.css">
         <link rel="stylesheet" href="css/styles/featured-products.css">
         <link rel="stylesheet" href="css/styles/products.css">
@@ -134,6 +135,80 @@
                 <source src="assets/Video/Timeline 2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+        </section>
+
+        <!-- Sales Section -->
+        <section class="sales-section">
+            <div class="sales-container">
+                <div class="sales-header">
+                    <h2 class="sales-title">Limited Time Sale</h2>
+                    <div class="sale-badge">Up to 40% Off</div>
+                </div>
+                
+                <div class="sales-grid">
+                    <!-- Sale Product 1: MonkiiBoard Pro -->
+                    <div class="sale-product-card">
+                        <div class="sale-product-image" style="background-image: url('assets/Images/Products/keyboard-placeholder.jpg');">
+                            <div class="sale-discount-badge">-35%</div>
+                        </div>
+                        <div class="sale-product-content">
+                            <h3 class="sale-product-name">MonkiiBoard Pro</h3>
+                            <p class="sale-product-description">
+                                Premium 65% mechanical keyboard with hot-swappable switches, aluminum frame, and RGB backlighting.
+                            </p>
+                            <div class="sale-product-pricing">
+                                <span class="sale-original-price">$249</span>
+                                <span class="sale-current-price">$159</span>
+                                <span class="sale-savings">Save $90</span>
+                            </div>
+                            <div class="sale-product-features">
+                                <div class="sale-feature">Hot-swappable switches</div>
+                                <div class="sale-feature">Premium aluminum construction</div>
+                                <div class="sale-feature">RGB backlighting</div>
+                                <div class="sale-feature">USB-C connectivity</div>
+                            </div>
+                            <div class="sale-product-actions">
+                                <button class="sale-btn-primary" onclick="location.href='shop.html'">Buy Now</button>
+                                <button class="sale-btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sale Product 2: MonkiiPad Premium -->
+                    <div class="sale-product-card">
+                        <div class="sale-product-image" style="background-image: url('assets/Images/Products/deskmat-placeholder.jpg');">
+                            <div class="sale-discount-badge">-25%</div>
+                        </div>
+                        <div class="sale-product-content">
+                            <h3 class="sale-product-name">MonkiiPad Premium</h3>
+                            <p class="sale-product-description">
+                                XXL premium desk mat made from high-quality materials with water-resistant coating and stitched edges.
+                            </p>
+                            <div class="sale-product-pricing">
+                                <span class="sale-original-price">$59</span>
+                                <span class="sale-current-price">$44</span>
+                                <span class="sale-savings">Save $15</span>
+                            </div>
+                            <div class="sale-product-features">
+                                <div class="sale-feature">XXL Size - 1200x600mm</div>
+                                <div class="sale-feature">Water-resistant coating</div>
+                                <div class="sale-feature">Stitched edges</div>
+                                <div class="sale-feature">Anti-slip rubber base</div>
+                            </div>
+                            <div class="sale-product-actions">
+                                <button class="sale-btn-primary" onclick="location.href='shop.html'">Buy Now</button>
+                                <button class="sale-btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sales-cta">
+                    <button class="sales-view-all" onclick="location.href='shop.html'">
+                        View All Sale Items
+                    </button>
+                </div>
+            </div>
         </section>
 
         <!-- Showcase Section -->
@@ -386,6 +461,5 @@
                 </div>
             </div>
         </footer>
-
     </body>
 </html>

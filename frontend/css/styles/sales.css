@@ -1,0 +1,290 @@
+/* Sales Section Styles */
+.sales-section {
+    background: #ffffff;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sales-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.sales-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sales-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sale-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #f39c12 100%);
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sales-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.sale-product-card {
+    background: #000000;
+    border: 2px solid #333;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+}
+
+.sale-product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgb(255, 187, 0);
+    box-shadow: 0 15px 35px rgba(255, 187, 0, 0.25);
+}
+
+/* Alternate layout for even cards (2nd, 4th, etc.) */
+.sale-product-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.sale-product-image {
+    width: 350px;
+    min-width: 350px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.sale-discount-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #e74c3c;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sale-product-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sale-product-name {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sale-product-description {
+    font-family: 'Roboto', sans-serif;
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.sale-product-pricing {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.sale-original-price {
+    font-family: 'Roboto', sans-serif;
+    color: #888888;
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
+.sale-current-price {
+    font-family: 'Goldman', sans-serif;
+    color: rgb(255, 187, 0);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.sale-savings {
+    background: rgba(255, 187, 0, 0.15);
+    color: rgb(255, 187, 0);
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.sale-product-features {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sale-feature {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #dddddd;
+    font-size: 0.95rem;
+}
+
+.sale-feature::before {
+    content: "✓";
+    color: rgb(255, 187, 0);
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.sale-product-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.sale-btn-primary {
+    flex: 1;
+    background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #f39c12 100%);
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sale-btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 187, 0, 0.3);
+}
+
+.sale-btn-secondary {
+    background: transparent;
+    color: rgb(255, 187, 0);
+    border: 2px solid rgb(255, 187, 0);
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sale-btn-secondary:hover {
+    background: rgb(255, 187, 0);
+    color: #000;
+}
+
+.sales-cta {
+    text-align: center;
+}
+
+.sales-view-all {
+    background: transparent;
+    color: rgb(255, 187, 0);
+    border: 2px solid rgb(255, 187, 0);
+    padding: 18px 40px;
+    border-radius: 30px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sales-view-all:hover {
+    background: rgb(255, 187, 0);
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sales-container {
+        padding: 0 50px;
+    }
+    
+    .sale-product-image {
+        width: 300px;
+        min-width: 300px;
+    }
+    
+    .sale-product-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sales-container {
+        padding: 0 20px;
+    }
+    
+    .sale-product-card {
+        flex-direction: column !important;
+        min-height: auto;
+    }
+    
+    .sale-product-image {
+        width: 100%;
+        min-width: auto;
+        height: 200px;
+    }
+    
+    .sales-title {
+        font-size: 2rem;
+    }
+    
+    .sale-product-actions {
+        flex-direction: column;
+    }
+    
+    .sale-product-features {
+        grid-template-columns: 1fr;
+    }
+}
