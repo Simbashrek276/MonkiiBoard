@@ -1,4 +1,4 @@
-/* Sales Section Styles */
+/* Sales Section Styles - Fresh Start */
 .sales-section {
     background: #ffffff;
     padding: 80px 0;
@@ -43,180 +43,187 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 0px;
 }
 
-.sale-product-card {
-    background: #000000;
-    border: 2px solid #333;
+/* Sale Card Structure */
+.sale-card {
+    position: relative;
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.3s ease;
-    position: relative;
-    display: flex;
-    flex-direction: row;
     min-height: 400px;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.sale-product-card:hover {
+.sale-card:hover {
     transform: translateY(-5px);
     border-color: rgb(255, 187, 0);
     box-shadow: 0 15px 35px rgba(255, 187, 0, 0.25);
 }
 
-/* Alternate layout for even cards (2nd, 4th, etc.) */
-.sale-product-card:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.sale-product-image {
-    width: 350px;
-    min-width: 350px;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Image Container */
+.sale-image-container {
+    width: 100%;
+    height: 400px;
     position: relative;
     overflow: hidden;
 }
 
-.sale-discount-badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #e74c3c;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 15px;
-    font-family: 'Goldman', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
+/* Background for first card */
+.sale-card-background {
+    width: 100%;
+    height: 100%;
+    background: #000000;
 }
 
-.sale-product-content {
-    padding: 20px;
-    flex: 1;
+/* Image for second card */
+.sale-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Overlay */
+.sale-content-overlay {
+    position: absolute;
+    top: -5;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    z-index: 2;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.sale-product-name {
+/* Discount Badge */
+.sale-discount {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 12px;
     font-family: 'Goldman', sans-serif;
-    font-size: 1.8rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sale Info Container */
+.sale-info {
+    color: #ffffff;
+}
+
+.sale-info .sale-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.2rem;
     color: #ffffff;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
 }
 
-.sale-product-description {
+.sale-description {
     font-family: 'Roboto', sans-serif;
-    color: #cccccc;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
+    color: #e0e0e0;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-.sale-product-pricing {
+/* Pricing */
+.sale-pricing {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-.sale-original-price {
+.sale-old-price {
     font-family: 'Roboto', sans-serif;
-    color: #888888;
-    font-size: 1.2rem;
+    color: #999999;
+    font-size: 1rem;
     text-decoration: line-through;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-.sale-current-price {
+.sale-new-price {
     font-family: 'Goldman', sans-serif;
     color: rgb(255, 187, 0);
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.sale-savings {
-    background: rgba(255, 187, 0, 0.15);
+.sale-save {
+    background: rgba(255, 187, 0, 0.2);
     color: rgb(255, 187, 0);
-    padding: 8px 15px;
-    border-radius: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 600;
+    backdrop-filter: blur(10px);
 }
 
-.sale-product-features {
-    margin-bottom: 30px;
+/* Features */
+.sale-features {
+    margin-bottom: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 8px;
 }
 
 .sale-feature {
     display: flex;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    color: #dddddd;
-    font-size: 0.95rem;
+    color: #f0f0f0;
+    font-size: 0.75rem;
 }
 
 .sale-feature::before {
     content: "✓";
     color: rgb(255, 187, 0);
     font-weight: bold;
-    margin-right: 10px;
-    font-size: 1.1rem;
+    margin-right: 8px;
+    font-size: 1rem;
 }
 
-.sale-product-actions {
-    display: flex;
-    gap: 15px;
-}
-
-.sale-btn-primary {
-    flex: 1;
+/* Buy Button */
+.sale-buy-btn {
     background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #f39c12 100%);
     color: #000;
     border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
+    padding: 14px 25px;
+    border-radius: 25px;
     font-family: 'Goldman', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 187, 0, 0.4);
+    width: 100%;
+    margin-top: 0px;
 }
 
-.sale-btn-primary:hover {
+.sale-buy-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 187, 0, 0.3);
-}
-
-.sale-btn-secondary {
-    background: transparent;
-    color: rgb(255, 187, 0);
-    border: 2px solid rgb(255, 187, 0);
-    padding: 13px 30px;
-    border-radius: 30px;
-    font-family: 'Goldman', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.sale-btn-secondary:hover {
-    background: rgb(255, 187, 0);
-    color: #000;
+    box-shadow: 0 10px 30px rgba(255, 187, 0, 0.6);
 }
 
 /* Responsive Design */
@@ -225,12 +232,11 @@
         padding: 0 50px;
     }
     
-    .sale-product-image {
-        width: 300px;
-        min-width: 300px;
+    .sale-card-content {
+        padding: 30px;
     }
     
-    .sale-product-features {
+    .sale-features {
         grid-template-columns: 1fr;
     }
 }
@@ -240,26 +246,19 @@
         padding: 0 20px;
     }
     
-    .sale-product-card {
-        flex-direction: column !important;
-        min-height: auto;
+    .sale-card-content {
+        padding: 25px;
     }
     
-    .sale-product-image {
-        width: 100%;
-        min-width: auto;
-        height: 200px;
+    .sale-info .sale-title {
+        font-size: 1.6rem;
+    }
+    
+    .sale-new-price {
+        font-size: 1.8rem;
     }
     
     .sales-title {
         font-size: 2rem;
-    }
-    
-    .sale-product-actions {
-        flex-direction: column;
-    }
-    
-    .sale-product-features {
-        grid-template-columns: 1fr;
     }
 }
