@@ -16,3 +16,544 @@ body {
     background-color: rgb(0, 0, 0);
     overflow-x: hidden;
 }
+
+/* Sales Title Corner Bananas */
+.sales-hero {
+    position: relative;
+}
+
+.sales-title-banana {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Top Left Corner Bananas */
+.sales-title-banana.tl-1 {
+    top: -10px;
+    left: 40px;
+    animation: violentShake1 2s infinite 1s;
+}
+
+.sales-title-banana.tl-2 {
+    top: 10px;
+    left: 60px;
+    animation: violentShake2 2s infinite 1s;
+}
+
+.sales-title-banana.tl-3 {
+    top: 5px;
+    left: 80px;
+    animation: violentShake3 2s infinite 1s;
+}
+
+/* Top Right Corner Bananas */
+.sales-title-banana.tr-1 {
+    top: -10px;
+    right: 40px;
+    animation: violentShake4 2s infinite 1s;
+}
+
+.sales-title-banana.tr-2 {
+    top: 10px;
+    right: 60px;
+    animation: violentShake5 2s infinite 1s;
+}
+
+.sales-title-banana.tr-3 {
+    top: 5px;
+    right: 80px;
+    animation: violentShake6 2s infinite 1s;
+}
+
+/* Individual violent shake animations with preserved transforms */
+@keyframes violentShake1 {
+    0%, 85%, 100% { 
+        transform: rotate(30deg); 
+    }
+    86% { 
+        transform: translateX(-8px) translateY(-5px) rotate(45deg); 
+    }
+    87% { 
+        transform: translateX(10px) translateY(3px) rotate(10deg); 
+    }
+    88% { 
+        transform: translateX(-12px) translateY(-8px) rotate(55deg); 
+    }
+    89% { 
+        transform: translateX(15px) translateY(6px) rotate(0deg); 
+    }
+    90% { 
+        transform: translateX(-10px) translateY(-4px) rotate(48deg); 
+    }
+    91% { 
+        transform: translateX(8px) translateY(7px) rotate(8deg); 
+    }
+    92% { 
+        transform: translateX(-6px) translateY(-3px) rotate(42deg); 
+    }
+    93% { 
+        transform: translateX(4px) translateY(2px) rotate(22deg); 
+    }
+    94% { 
+        transform: translateX(-3px) translateY(-1px) rotate(35deg); 
+    }
+    95% { 
+        transform: translateX(2px) translateY(1px) rotate(27deg); 
+    }
+}
+
+@keyframes violentShake2 {
+    0%, 85%, 100% { 
+        transform: rotate(-30deg) scale(1.1); 
+    }
+    86% { 
+        transform: translateX(-8px) translateY(-5px) rotate(-15deg) scale(1.1); 
+    }
+    87% { 
+        transform: translateX(10px) translateY(3px) rotate(-50deg) scale(1.1); 
+    }
+    88% { 
+        transform: translateX(-12px) translateY(-8px) rotate(-5deg) scale(1.1); 
+    }
+    89% { 
+        transform: translateX(15px) translateY(6px) rotate(-60deg) scale(1.1); 
+    }
+    90% { 
+        transform: translateX(-10px) translateY(-4px) rotate(-12deg) scale(1.1); 
+    }
+    91% { 
+        transform: translateX(8px) translateY(7px) rotate(-52deg) scale(1.1); 
+    }
+    92% { 
+        transform: translateX(-6px) translateY(-3px) rotate(-18deg) scale(1.1); 
+    }
+    93% { 
+        transform: translateX(4px) translateY(2px) rotate(-38deg) scale(1.1); 
+    }
+    94% { 
+        transform: translateX(-3px) translateY(-1px) rotate(-25deg) scale(1.1); 
+    }
+    95% { 
+        transform: translateX(2px) translateY(1px) rotate(-33deg) scale(1.1); 
+    }
+}
+
+@keyframes violentShake3 {
+    0%, 85%, 100% { 
+        transform: rotate(-60deg) scale(1.3); 
+    }
+    86% { 
+        transform: translateX(-8px) translateY(-5px) rotate(-45deg) scale(1.3); 
+    }
+    87% { 
+        transform: translateX(10px) translateY(3px) rotate(-80deg) scale(1.3); 
+    }
+    88% { 
+        transform: translateX(-12px) translateY(-8px) rotate(-35deg) scale(1.3); 
+    }
+    89% { 
+        transform: translateX(15px) translateY(6px) rotate(-90deg) scale(1.3); 
+    }
+    90% { 
+        transform: translateX(-10px) translateY(-4px) rotate(-42deg) scale(1.3); 
+    }
+    91% { 
+        transform: translateX(8px) translateY(7px) rotate(-82deg) scale(1.3); 
+    }
+    92% { 
+        transform: translateX(-6px) translateY(-3px) rotate(-48deg) scale(1.3); 
+    }
+    93% { 
+        transform: translateX(4px) translateY(2px) rotate(-68deg) scale(1.3); 
+    }
+    94% { 
+        transform: translateX(-3px) translateY(-1px) rotate(-55deg) scale(1.3); 
+    }
+    95% { 
+        transform: translateX(2px) translateY(1px) rotate(-63deg) scale(1.3); 
+    }
+}
+
+@keyframes violentShake4 {
+    0%, 85%, 100% { 
+        transform: rotate(-30deg) scaleX(-1); 
+    }
+    86% { 
+        transform: translateX(-8px) translateY(-5px) rotate(-15deg) scaleX(-1); 
+    }
+    87% { 
+        transform: translateX(10px) translateY(3px) rotate(-50deg) scaleX(-1); 
+    }
+    88% { 
+        transform: translateX(-12px) translateY(-8px) rotate(-5deg) scaleX(-1); 
+    }
+    89% { 
+        transform: translateX(15px) translateY(6px) rotate(-60deg) scaleX(-1); 
+    }
+    90% { 
+        transform: translateX(-10px) translateY(-4px) rotate(-12deg) scaleX(-1); 
+    }
+    91% { 
+        transform: translateX(8px) translateY(7px) rotate(-52deg) scaleX(-1); 
+    }
+    92% { 
+        transform: translateX(-6px) translateY(-3px) rotate(-18deg) scaleX(-1); 
+    }
+    93% { 
+        transform: translateX(4px) translateY(2px) rotate(-38deg) scaleX(-1); 
+    }
+    94% { 
+        transform: translateX(-3px) translateY(-1px) rotate(-25deg) scaleX(-1); 
+    }
+    95% { 
+        transform: translateX(2px) translateY(1px) rotate(-33deg) scaleX(-1); 
+    }
+}
+
+@keyframes violentShake5 {
+    0%, 85%, 100% { 
+        transform: rotate(30deg) scaleX(-1) scale(1.1); 
+    }
+    86% { 
+        transform: translateX(-8px) translateY(-5px) rotate(45deg) scaleX(-1) scale(1.1); 
+    }
+    87% { 
+        transform: translateX(10px) translateY(3px) rotate(10deg) scaleX(-1) scale(1.1); 
+    }
+    88% { 
+        transform: translateX(-12px) translateY(-8px) rotate(55deg) scaleX(-1) scale(1.1); 
+    }
+    89% { 
+        transform: translateX(15px) translateY(6px) rotate(0deg) scaleX(-1) scale(1.1); 
+    }
+    90% { 
+        transform: translateX(-10px) translateY(-4px) rotate(48deg) scaleX(-1) scale(1.1); 
+    }
+    91% { 
+        transform: translateX(8px) translateY(7px) rotate(8deg) scaleX(-1) scale(1.1); 
+    }
+    92% { 
+        transform: translateX(-6px) translateY(-3px) rotate(42deg) scaleX(-1) scale(1.1); 
+    }
+    93% { 
+        transform: translateX(4px) translateY(2px) rotate(22deg) scaleX(-1) scale(1.1); 
+    }
+    94% { 
+        transform: translateX(-3px) translateY(-1px) rotate(35deg) scaleX(-1) scale(1.1); 
+    }
+    95% { 
+        transform: translateX(2px) translateY(1px) rotate(27deg) scaleX(-1) scale(1.1); 
+    }
+}
+
+@keyframes violentShake6 {
+    0%, 85%, 100% { 
+        transform: rotate(60deg) scaleX(-1) scale(1.3); 
+    }
+    86% { 
+        transform: translateX(-8px) translateY(-5px) rotate(75deg) scaleX(-1) scale(1.3); 
+    }
+    87% { 
+        transform: translateX(10px) translateY(3px) rotate(40deg) scaleX(-1) scale(1.3); 
+    }
+    88% { 
+        transform: translateX(-12px) translateY(-8px) rotate(85deg) scaleX(-1) scale(1.3); 
+    }
+    89% { 
+        transform: translateX(15px) translateY(6px) rotate(30deg) scaleX(-1) scale(1.3); 
+    }
+    90% { 
+        transform: translateX(-10px) translateY(-4px) rotate(78deg) scaleX(-1) scale(1.3); 
+    }
+    91% { 
+        transform: translateX(8px) translateY(7px) rotate(38deg) scaleX(-1) scale(1.3); 
+    }
+    92% { 
+        transform: translateX(-6px) translateY(-3px) rotate(72deg) scaleX(-1) scale(1.3); 
+    }
+    93% { 
+        transform: translateX(4px) translateY(2px) rotate(52deg) scaleX(-1) scale(1.3); 
+    }
+    94% { 
+        transform: translateX(-3px) translateY(-1px) rotate(65deg) scaleX(-1) scale(1.3); 
+    }
+    95% { 
+        transform: translateX(2px) translateY(1px) rotate(57deg) scaleX(-1) scale(1.3); 
+    }
+}
+
+/* Falling mini bananas */
+.falling-banana {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.falling-banana-1 {
+    left: 230px;
+    animation: fallDown1 1.5s ease-in infinite 1.7s;
+}
+
+.falling-banana-2 {
+    left: 250px;
+    animation: fallDown2 1.8s ease-in infinite 2s;
+}
+
+.falling-banana-3 {
+    left: 290px;
+    animation: fallDown3 1.6s ease-in infinite 2.3s;
+}
+
+.falling-banana-4 {
+    right: 230px;
+    animation: fallDown4 1.7s ease-in infinite 2.6s;
+}
+
+.falling-banana-5 {
+    right: 250px;
+    animation: fallDown5 1.9s ease-in infinite 2.9s;
+}
+
+.falling-banana-6 {
+    right: 290px;
+    animation: fallDown6 1.4s ease-in infinite 3.2s;
+}
+
+/* Falling animations */
+@keyframes fallDown1 {
+    0% { 
+        top: 70px; 
+        transform: rotate(45deg) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+        transform: rotate(60deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+    80% {
+        transform: rotate(300deg) scale(1.1);
+    }
+    100% { 
+        top: calc(100vh - 100px); 
+        transform: rotate(405deg) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes fallDown2 {
+    0% { 
+        top: 100px; 
+        transform: rotate(-30deg) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+        transform: rotate(-45deg) scale(1);
+    }
+    50% {
+        transform: rotate(-150deg) scale(1.2);
+    }
+    80% {
+        transform: rotate(-270deg) scale(1);
+    }
+    100% { 
+        top: calc(100vh - 100px); 
+        transform: rotate(-390deg) scale(0.7);
+        opacity: 0;
+    }
+}
+
+@keyframes fallDown3 {
+    0% { 
+        top: 125px; 
+        transform: rotate(90deg) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+        transform: rotate(105deg) scale(1);
+    }
+    50% {
+        transform: rotate(225deg) scale(1.1);
+    }
+    80% {
+        transform: rotate(345deg) scale(1.3);
+    }
+    100% { 
+        top: calc(100vh - 100px); 
+        transform: rotate(450deg) scale(0.6);
+        opacity: 0;
+    }
+}
+
+@keyframes fallDown4 {
+    0% { 
+        top: 70px; 
+        transform: rotate(-60deg) scaleX(-1) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+        transform: rotate(-75deg) scaleX(-1) scale(1);
+    }
+    50% {
+        transform: rotate(-195deg) scaleX(-1) scale(1.1);
+    }
+    80% {
+        transform: rotate(-315deg) scaleX(-1) scale(1.2);
+    }
+    100% { 
+        top: calc(100vh - 100px); 
+        transform: rotate(-420deg) scaleX(-1) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes fallDown5 {
+    0% { 
+        top: 100px; 
+        transform: rotate(120deg) scaleX(-1) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+        transform: rotate(135deg) scaleX(-1) scale(1);
+    }
+    50% {
+        transform: rotate(255deg) scaleX(-1) scale(1.3);
+    }
+    80% {
+        transform: rotate(375deg) scaleX(-1) scale(1);
+    }
+    100% { 
+        top: calc(100vh - 100px); 
+        transform: rotate(480deg) scaleX(-1) scale(0.7);
+        opacity: 0;
+    }
+}
+
+@keyframes fallDown6 {
+    0% { 
+        top: 125px; 
+        transform: rotate(-90deg) scaleX(-1) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+        transform: rotate(-105deg) scaleX(-1) scale(1);
+    }
+    50% {
+        transform: rotate(-225deg) scaleX(-1) scale(1.2);
+    }
+    80% {
+        transform: rotate(-345deg) scaleX(-1) scale(1.1);
+    }
+    100% { 
+        top: calc(100vh - 100px); 
+        transform: rotate(-450deg) scaleX(-1) scale(0.9);
+        opacity: 0;
+    }
+}
+
+/* Make sales section relative for absolute positioning */
+.sales-section {
+    position: relative;
+}
+
+/* Hide title bananas on mobile */
+@media (max-width: 768px) {
+    .sales-title-banana {
+        display: none;
+    }
+}
+
+/* Sales Card Mini Bananas */
+.sale-card {
+    position: relative;
+    overflow: visible !important;
+}
+
+.sale-card-banana {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 10;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Card 1 Bananas */
+.sale-card:nth-child(1) .sale-card-banana:nth-child(1) {
+    top: -10px;
+    left: -15px;
+    transform: rotate(180deg) scale(1.3);
+}
+
+.sale-card:nth-child(1) .sale-card-banana:nth-child(2) {
+    top: -27px;
+    right: -20px;
+    transform: rotate(-100deg) scale(0.9);
+}
+
+.sale-card:nth-child(1) .sale-card-banana:nth-child(3) {
+    bottom: -20px;
+    left: -25px;
+    transform: scale(1) rotate(100deg);
+}
+
+/* Card 2 Bananas */
+.sale-card:nth-child(2) .sale-card-banana:nth-child(1) {
+    top: -8px;
+    left: -20px;
+    transform: rotate(90deg) scaleX(-1);
+}
+
+.sale-card:nth-child(2) .sale-card-banana:nth-child(2) {
+    top: -30px;
+    right: -25px;
+    transform: rotate(-80deg) scale(0.6);
+}
+
+.sale-card:nth-child(2) .sale-card-banana:nth-child(3) {
+    bottom: -15px;
+    right: -15px;
+    transform: scale(1.3);
+}
+
+
+/* Hover Effects - Bananas move away */
+.sale-card:hover .sale-card-banana:nth-child(1) {
+    transform: translate(-30px, -30px) rotate(-45deg) scale(0.8);
+    opacity: 0.2;
+}
+
+.sale-card:hover .sale-card-banana:nth-child(2) {
+    transform: translate(40px, -25px) rotate(60deg) scale(0.8);
+    opacity: 0.2;
+}
+
+.sale-card:hover .sale-card-banana:nth-child(3) {
+    transform: translate(-20px, 35px) rotate(-30deg) scale(0.8);
+    opacity: 0.2;
+}
+
+/* Hide mini bananas on mobile */
+@media (max-width: 768px) {
+    .sale-card-banana {
+        display: none;
+    }
+}
