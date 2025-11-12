@@ -8,7 +8,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../../assets/Images/PCBs/pcb3.jpg') center calc(50% + 200px)/cover no-repeat;
+    background: url('../../assets/Images/PCBs/pcb3.jpg') center calc(50% + 400px) no-repeat;
+    background-size: cover;
+}
+
+@keyframes zoomOut {
+    from {
+        background-size: 120%;
+    }
+    to {
+        background-size: cover;
+    }
 }
 
 .hero-section::before {
