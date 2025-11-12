@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/styles/body.css">
         <link rel="stylesheet" href="css/styles/header.css">
         <link rel="stylesheet" href="css/styles/homepage_background.css">
+        <link rel="stylesheet" href="css/styles/benefits.css">
         <link rel="stylesheet" href="css/styles/login.css">
         <link rel="stylesheet" href="css/styles/signup.css">
         <link rel="stylesheet" href="css/styles/resetpassword.css">
@@ -23,6 +24,7 @@
                 <div class="logo-holder">
                     <a href="#" onclick="scrollToTop()">
                         <img class="logo" src="assets/logo/logo.jpg" alt="MonkiiBoard Logo">
+                        <span class="logo-text"><span class="highlight">Monkii</span>Board</span>
                     </a>
                 </div>
             </div>
@@ -112,29 +114,79 @@
             </div>
         </div>
 
-        <section class="video-background-section">
-            <div class="video-overlay">
-                <h1 class="startup-name">
-                    <span style="color:  rgb(255, 187, 0)">Monkii</span>Board
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-tagline">PCB DESIGN EXCELLENCE</div>
+                <h1 class="hero-title">
+                    Circuit Boards & PCBs for Your<br><span class="highlight">Next Innovation</span>
                 </h1>
-                <p class="startup-slogan">Clean, Minimal, and Monochrome Desktop Setups for Users</p>
+                <p class="hero-description">
+                    MonkiiBoard specializes in custom PCB design and manufacturing. From concept to production, we bring your electronic visions to life with professional-grade circuit boards designed in KiCad.
+                </p>
+                <div class="hero-cta">
+                    <div class="hero-btn-wrapper">
+                        <button class="hero-btn hero-btn-primary" onclick="location.href='#contact'">Start Your Design</button>
+                        <div class="hero-dropdown">
+                            <a href="#" class="dropdown-item">Custom PCB Design</a>
+                            <a href="#" class="dropdown-item">Schematic Review</a>
+                            <a href="#" class="dropdown-item">Layout Services</a>
+                            <a href="#" class="dropdown-item">Prototyping</a>
+                        </div>
+                    </div>
+                    <div class="hero-btn-wrapper">
+                        <button class="hero-btn hero-btn-secondary" onclick="location.href='shop.html'">Explore Products</button>
+                        <div class="hero-dropdown">
+                            <a href="shop.html" class="dropdown-item">PCB Boards</a>
+                            <a href="shop.html" class="dropdown-item">Components</a>
+                            <a href="shop.html" class="dropdown-item">Accessories</a>
+                            <a href="shop.html" class="dropdown-item">Keyboards</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <video
-                autoplay
-                muted
-                loop
-                playsinline
-                style="
-                    width: 100vw;
-                    height: 100vh;
-                    object-fit: cover;
-                    display: block;
-                    pointer-events: none;
-                "
-            >
-                <source src="assets/Video/Timeline 2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="benefits-container">
+                <div class="benefits-header">
+                    <h2 class="benefits-title">4 Ways we make your PCBs better</h2>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⚡</div>
+                        <h3 class="benefit-title">Expert KiCad Design</h3>
+                        <p class="benefit-description">
+                            Our team of experienced engineers uses industry-standard KiCad software to create professional, optimized PCB layouts tailored to your exact specifications.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎯</div>
+                        <h3 class="benefit-title">Custom Solutions</h3>
+                        <p class="benefit-description">
+                            Every project is unique. We work closely with you to understand your requirements and deliver custom PCB designs that perfectly match your vision and functionality needs.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⚙️</div>
+                        <h3 class="benefit-title">Full Manufacturing Support</h3>
+                        <p class="benefit-description">
+                            From prototype to production, we handle the entire process. Get design files, manufacturing-ready Gerbers, and support through assembly and testing.
+                        </p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🚀</div>
+                        <h3 class="benefit-title">Fast Turnaround</h3>
+                        <p class="benefit-description">
+                            Time is crucial in product development. We pride ourselves on delivering high-quality PCB designs quickly without compromising on precision or reliability.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Limited Time Sales Section -->
@@ -416,12 +468,12 @@
                             <span class="footer-brand-name">MonkiiBoard</span>
                         </div>
                         <p class="footer-description">
-                            Creating minimal, functional, and beautiful mechanical keyboards and desktop accessories for modern professionals.
+                            Creating precision-engineered PCBs and professional electronics solutions for innovators and makers worldwide.
                         </p>
                         <div class="footer-social">
-                            <a href="#" class="footer-social-link">@</a>
-                            <a href="#" class="footer-social-link">→</a>
-                            <a href="#" class="footer-social-link">◯</a>
+                            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+                            <a href="#" class="footer-social-link" aria-label="GitHub">⚙</a>
                         </div>
                     </div>
 
@@ -429,10 +481,10 @@
                     <div class="footer-section">
                         <h4>Products</h4>
                         <ul>
-                            <li><a href="shop.html">Keyboards</a></li>
-                            <li><a href="shop.html">PCBs</a></li>
+                            <li><a href="shop.html">PCB Designs</a></li>
+                            <li><a href="shop.html">Custom Boards</a></li>
                             <li><a href="shop.html">Accessories</a></li>
-                            <li><a href="shop.html">New Arrivals</a></li>
+                            <li><a href="shop.html">Components</a></li>
                         </ul>
                     </div>
 
@@ -442,7 +494,7 @@
                         <ul>
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="insights.html">Technology</a></li>
-                            <li><a href="setups.html">Gallery</a></li>
+                            <li><a href="setups.html">Portfolio</a></li>
                             <li><a href="mailto:hello@monkiiboard.com">Contact</a></li>
                         </ul>
                     </div>
@@ -452,20 +504,10 @@
                         <h4>Support</h4>
                         <ul>
                             <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Warranty</a></li>
-                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Design Guide</a></li>
+                            <li><a href="#">Services</a></li>
                             <li><a href="#">FAQ</a></li>
                         </ul>
-                    </div>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="footer-newsletter">
-                    <h3>Stay Updated</h3>
-                    <p>Get the latest news on new products, exclusive releases, and minimal design inspiration.</p>
-                    <div class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" class="newsletter-input">
-                        <button class="newsletter-button">Subscribe</button>
                     </div>
                 </div>
 

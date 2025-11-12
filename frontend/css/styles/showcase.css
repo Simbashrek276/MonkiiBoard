@@ -120,7 +120,7 @@
 
 /* Typography */
 .showcase-overlay h2 {
-    font-family: 'Goldman', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 15px;
@@ -131,7 +131,7 @@
 }
 
 .showcase-overlay h3 {
-    font-family: 'Goldman', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 12px;
@@ -175,7 +175,7 @@
     color: #000;
     border: none;
     padding: 12px 30px;
-    font-family: 'Goldman', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     text-transform: uppercase;
