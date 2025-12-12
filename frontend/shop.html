@@ -157,153 +157,68 @@
         </section>
 
         <!-- Footer -->
-        <footer style="background: linear-gradient(135deg, #1a1a1a 0%, #000 100%); color: #fff; padding: 80px 0 40px;">
-            <div style="max-width: 1200px; margin: 0 auto; padding: 0 50px;">
-                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
                     <!-- Brand Section -->
                     <div>
-                        <div style="display: flex; align-items: center; margin-bottom: 30px;">
-                            <img src="assets/logo/logo.jpg" alt="MonkiiBoard" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 15px;">
-                            <span style="font-family: 'Goldman', sans-serif; font-size: 1.8rem; font-weight: 700; color: rgb(255, 187, 0);">MonkiiBoard</span>
+                        <div class="footer-brand">
+                            <img src="assets/logo/logo.jpg" alt="MonkiiBoard" class="footer-logo">
+                            <span class="footer-brand-name">MonkiiBoard</span>
                         </div>
-                        <p style="font-family: 'Roboto', sans-serif; color: #aaa; font-weight: 300; line-height: 1.7; margin-bottom: 30px; max-width: 350px;">
-                            Creating minimal, functional, and beautiful mechanical keyboards and desktop accessories for modern professionals.
+                        <p class="footer-description">
+                            Creating innovative solutions for the modern workspace, especially for your keyboard.
                         </p>
-                        <div style="display: flex; gap: 15px;">
-                            <a href="#" style="width: 45px; height: 45px; background: rgba(255, 187, 0, 0.1); border: 1px solid rgba(255, 187, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgb(255, 187, 0); transition: all 0.3s ease; text-decoration: none;"
-                               onmouseover="this.style.background='rgb(255, 187, 0)'; this.style.color='#000'" 
-                               onmouseout="this.style.background='rgba(255, 187, 0, 0.1)'; this.style.color='rgb(255, 187, 0)'">
-                                <span style="font-size: 18px;">@</span>
-                            </a>
-                            <a href="#" style="width: 45px; height: 45px; background: rgba(255, 187, 0, 0.1); border: 1px solid rgba(255, 187, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgb(255, 187, 0); transition: all 0.3s ease; text-decoration: none;"
-                               onmouseover="this.style.background='rgb(255, 187, 0)'; this.style.color='#000'" 
-                               onmouseout="this.style.background='rgba(255, 187, 0, 0.1)'; this.style.color='rgb(255, 187, 0)'">
-                                <span style="font-size: 18px;">→</span>
-                            </a>
-                            <a href="#" style="width: 45px; height: 45px; background: rgba(255, 187, 0, 0.1); border: 1px solid rgba(255, 187, 0, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgb(255, 187, 0); transition: all 0.3s ease; text-decoration: none;"
-                               onmouseover="this.style.background='rgb(255, 187, 0)'; this.style.color='#000'" 
-                               onmouseout="this.style.background='rgba(255, 187, 0, 0.1)'; this.style.color='rgb(255, 187, 0)'">
-                                <span style="font-size: 18px;">◯</span>
-                            </a>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+                            <a href="#" class="footer-social-link" aria-label="GitHub">⚙</a>
                         </div>
                     </div>
 
                     <!-- Products -->
-                    <div>
-                        <h4 style="font-family: 'Goldman', sans-serif; color: #fff; font-size: 1.1rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Products</h4>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 12px;">
-                                <a href="shop.html" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">Keyboards</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="shop.html" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">PCBs</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="shop.html" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">Accessories</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="shop.html" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">New Arrivals</a>
-                            </li>
+                    <div class="footer-section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="shop.html">PCB Designs</a></li>
+                            <li><a href="shop.html">Custom Boards</a></li>
+                            <li><a href="shop.html">Accessories</a></li>
+                            <li><a href="shop.html">Components</a></li>
                         </ul>
                     </div>
 
                     <!-- Company -->
-                    <div>
-                        <h4 style="font-family: 'Goldman', sans-serif; color: #fff; font-size: 1.1rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Company</h4>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 12px;">
-                                <a href="about.html" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">About Us</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="insights.html" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">Technology</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="setups.html" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">Gallery</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="mailto:hello@monkiiboard.com" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">Contact</a>
-                            </li>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="insights.html">Technology</a></li>
+                            <li><a href="setups.html">Portfolio</a></li>
+                            <li><a href="mailto:hello@monkiiboard.com">Contact</a></li>
                         </ul>
                     </div>
 
                     <!-- Support -->
-                    <div>
-                        <h4 style="font-family: 'Goldman', sans-serif; color: #fff; font-size: 1.1rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Support</h4>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 12px;">
-                                <a href="#" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">Documentation</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="#" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">Warranty</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="#" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">Returns</a>
-                            </li>
-                            <li style="margin-bottom: 12px;">
-                                <a href="#" style="font-family: 'Roboto', sans-serif; color: #aaa; text-decoration: none; transition: color 0.3s ease;" 
-                                   onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                                   onmouseout="this.style.color='#aaa'">FAQ</a>
-                            </li>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Design Guide</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Newsletter -->
-                <div style="background: rgba(255, 187, 0, 0.05); border: 1px solid rgba(255, 187, 0, 0.2); border-radius: 16px; padding: 40px; margin-bottom: 50px; text-align: center;">
-                    <h3 style="font-family: 'Goldman', sans-serif; color: rgb(255, 187, 0); font-size: 1.5rem; margin-bottom: 15px; text-transform: uppercase;">Stay Updated</h3>
-                    <p style="font-family: 'Roboto', sans-serif; color: #aaa; margin-bottom: 30px; font-size: 1rem;">
-                        Get the latest news on new products, exclusive releases, and minimal design inspiration.
-                    </p>
-                    <div style="display: flex; max-width: 400px; margin: 0 auto; gap: 15px;">
-                        <input type="email" placeholder="Enter your email" 
-                               style="flex: 1; padding: 15px 20px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 187, 0, 0.3); border-radius: 30px; color: #fff; font-family: 'Roboto', sans-serif; outline: none;"
-                               onfocus="this.style.borderColor='rgb(255, 187, 0)'" 
-                               onblur="this.style.borderColor='rgba(255, 187, 0, 0.3)'">
-                        <button style="background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #f39c12 100%); color: #000; border: none; padding: 15px 25px; font-family: 'Goldman', sans-serif; font-size: 0.9rem; text-transform: uppercase; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; letter-spacing: 1px;">
-                            Subscribe
-                        </button>
-                    </div>
-                </div>
-
                 <!-- Bottom Bar -->
-                <div style="border-top: 1px solid #333; padding-top: 40px; display: flex; justify-content: space-between; align-items: center;">
+                <div class="footer-bottom">
                     <div>
-                        <p style="font-family: 'Roboto', sans-serif; color: #666; font-size: 0.9rem; margin: 0;">
-                            © 2025 MonkiiBoard. All rights reserved.
-                        </p>
+                        <p class="footer-copyright">© 2025 MonkiiBoard. All rights reserved.</p>
                     </div>
-                    <div style="display: flex; gap: 30px;">
-                        <a href="#" style="font-family: 'Roboto', sans-serif; color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease;" 
-                           onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                           onmouseout="this.style.color='#666'">Privacy Policy</a>
-                        <a href="#" style="font-family: 'Roboto', sans-serif; color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease;" 
-                           onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                           onmouseout="this.style.color='#666'">Terms of Service</a>
-                        <a href="#" style="font-family: 'Roboto', sans-serif; color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease;" 
-                           onmouseover="this.style.color='rgb(255, 187, 0)'" 
-                           onmouseout="this.style.color='#666'">Cookies</a>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookies</a>
                     </div>
                 </div>
             </div>

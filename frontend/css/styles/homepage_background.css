@@ -1,4 +1,4 @@
-/* Hero Section */
+/* Hero Section - Monopo Saigon Style */
 .hero-section {
     position: relative;
     width: 100%;
@@ -7,46 +7,134 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: url('../../assets/Images/PCBs/pcb3.jpg') center calc(50% + 400px) no-repeat;
-    background-size: cover;
-}
-
-@keyframes zoomOut {
-    from {
-        background-size: 120%;
-    }
-    to {
-        background-size: cover;
-    }
+    justify-content: flex-start;
+    padding-left: 10%;
+    background: 
+        radial-gradient(ellipse at 20% 30%, rgb(0, 0, 0) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgb(0, 63, 134) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgb(0, 0, 0) 0%, transparent 60%),
+        linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f5f5f5 100%);
+    background-size: 200% 200%, 250% 250%, 300% 300%, 100% 100%;
+    animation: saigonFlow 18s ease-in-out infinite;
 }
 
 .hero-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 10%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+    top: -50%;
+    right: -10%;
+    width: 60%;
+    height: 120%;
+    background: 
+        radial-gradient(ellipse at center, rgba(0, 73, 133, 0.8) 0%, transparent 70%);
+    filter: blur(10px);
+    opacity: 0.7;
+    animation: floatSoft 25s ease-in-out infinite;
+    pointer-events: none;
     z-index: 1;
 }
 
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 50%;
+    height: 80%;
+    background: 
+        radial-gradient(ellipse at center, rgba(255, 149, 10, 0.9) 0%, transparent 70%);
+    filter: blur(120px);
+    opacity: 0.5;
+    animation: floatSoft 30s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes saigonFlow {
+    0%, 100% {
+        background-position: 0% 0%, 100% 100%, 50% 50%, 0% 0%;
+    }
+    33% {
+        background-position: 100% 50%, 0% 50%, 80% 20%, 0% 0%;
+    }
+    66% {
+        background-position: 50% 100%, 50% 0%, 20% 80%, 0% 0%;
+    }
+}
+
+@keyframes floatSoft {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+    33% {
+        transform: translate(-20px, -30px) scale(1.1);
+        opacity: 0.8;
+    }
+    66% {
+        transform: translate(20px, -20px) scale(0.95);
+        opacity: 0.6;
+    }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes waveSlide {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes liquidMetal {
+    0%, 100% { 
+        background-position: 0% 0%;
+        filter: brightness(1) contrast(1);
+    }
+    33% { 
+        background-position: 100% 0%;
+        filter: brightness(1.2) contrast(1.1);
+    }
+    66% { 
+        background-position: 100% 100%;
+        filter: brightness(0.9) contrast(1.2);
+    }
+}
+
+@keyframes grain {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(-10%, 5%); }
+    30% { transform: translate(5%, -10%); }
+    40% { transform: translate(-5%, 15%); }
+    50% { transform: translate(-10%, 5%); }
+    60% { transform: translate(15%, 0%); }
+    70% { transform: translate(0%, 10%); }
+    80% { transform: translate(-15%, 0%); }
+    90% { transform: translate(10%, 5%); }
+}
+
 .hero-content {
-    max-width: 900px;
-    padding: 100px 60px 80px;
-    text-align: center;
+    max-width: 650px;
+    padding: 60px 50px;
+    text-align: left;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    backdrop-filter: blur(30px) saturate(120%);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .hero-tagline {
     font-family: 'Roboto', sans-serif;
     font-size: 0.75rem;
-    color: #ffffff;
-    font-weight: 600;
-    letter-spacing: 2px;
+    color: #2c2c2c;
+    font-weight: 700;
+    letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 20px;
     opacity: 0;
@@ -54,54 +142,76 @@
 }
 
 .hero-title {
-    font-family: 'Sora', sans-serif;
-    font-size: 3rem;
-    color: #000000;
+    font-family: 'Goldman', sans-serif;
+    font-size: 3.5rem;
+    color: #1a1a1a;
     font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 20px 0;
+    line-height: 1.1;
+    margin: 0 0 25px 0;
     opacity: 0;
     animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
 .hero-title .highlight {
     color: rgb(255, 187, 0);
+    display: block;
 }
 
 .hero-description {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #ffffff;
+    font-size: 1.05rem;
+    color: rgba(44, 44, 44, 0.9);
     font-weight: 400;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto 32px;
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 0 35px 0;
     opacity: 0;
     animation: fadeInUp 0.8s ease 0.4s forwards;
 }
 
 .hero-cta {
     display: flex;
-    gap: 12px;
-    justify-content: center;
+    gap: 15px;
+    justify-content: flex-start;
     align-items: center;
     opacity: 0;
     animation: fadeInUp 0.8s ease 0.6s forwards;
+    flex-wrap: wrap;
 }
 
 .hero-btn-wrapper {
     position: relative;
 }
 
+.hero-btn-wrapper:not(:last-child) {
+    position: static;
+}
+
 .hero-btn {
-    padding: 12px 24px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    border-radius: 6px;
+    padding: 14px 32px;
+    font-size: 0.85rem;
+    font-weight: 550;
+    border-radius: 35px;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Roboto', sans-serif;
+    transition: all 0.5s ease;
+    font-family: 'Goldman', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    z-index: -1;
 }
 
 .hero-dropdown {
@@ -123,7 +233,8 @@
     border-radius: 0 0 6px 6px;
 }
 
-.hero-btn-wrapper:hover .hero-dropdown {
+/* Only show dropdown for the second button (Order Custom Keyboard) */
+.hero-btn-wrapper:last-child:hover .hero-dropdown {
     opacity: 1;
     visibility: visible;
     max-height: 300px;
@@ -150,28 +261,45 @@
 }
 
 .hero-btn-primary {
+    background: rgb(255, 187, 0);
+    color: #000000;
+    border: 3px solid rgb(255, 187, 0);
+}
+
+.hero-btn-primary::before {
     background: #000000;
-    color: #ffffff;
-    border: 2px solid #000000;
+}
+
+.hero-btn-primary:hover::before {
+    left: 0;
 }
 
 .hero-btn-primary:hover {
-    background: rgb(255, 187, 0);
-    color: black;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-btn-secondary {
     background: transparent;
-    color: #000000;
-    border: 2px solid #000000;
+    color: #1a1a1a;
+    border: 3px solid #1a1a1a;
+}
+
+.hero-btn-secondary::before {
+    background: #1a1a1a;
+}
+
+.hero-btn-secondary:hover::before {
+    left: 0;
 }
 
 .hero-btn-secondary:hover {
-    background: #000000;
     color: #ffffff;
-    transform: translateY(-2px);
+    border-color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeInUp {
@@ -183,4 +311,20 @@
         opacity: 0;
         transform: translateY(20px);
     }
+}
+
+@keyframes breathe {
+    0%, 100% {
+        background-size: 150% 150%, 200% 200%, 100% 100%;
+        opacity: 1;
+    }
+    50% {
+        background-size: 180% 180%, 230% 230%, 100% 100%;
+        opacity: 0.95;
+    }
+}
+
+@keyframes contrastPulse {
+    0%, 100% { --pulse: 0.2; }
+    50% { --pulse: 0.6; }
 }

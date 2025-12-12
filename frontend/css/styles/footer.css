@@ -1,8 +1,8 @@
 footer {
-    background: #ffffff;
-    color: #000000;
+    background: #000000;
+    color: #ffffff;
     padding: 60px 0 30px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-container {
@@ -35,7 +35,7 @@ footer {
 .footer-brand-name {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #000000;
+    color: #ffffff;
 }
 
 .footer-brand-name .highlight {
@@ -43,7 +43,7 @@ footer {
 }
 
 .footer-description {
-    color: #666;
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.6;
@@ -59,26 +59,26 @@ footer {
 .footer-social-link {
     width: 36px;
     height: 36px;
-    background: #f5f5f5;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000000;
+    color: #ffffff;
     transition: all 0.2s ease;
     text-decoration: none;
     font-size: 16px;
 }
 
 .footer-social-link:hover {
-    background: #000000;
-    color: #ffffff;
+    background: rgb(255, 187, 0);
+    color: #000000;
     transform: translateY(-2px);
 }
 
 /* Footer Sections */
 .footer-section h4 {
-    color: #000000;
+    color: #ffffff;
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 16px;
@@ -97,19 +97,19 @@ footer {
 }
 
 .footer-section a {
-    color: #666;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-size: 0.875rem;
     transition: color 0.2s ease;
 }
 
 .footer-section a:hover {
-    color: #000000;
+    color: rgb(255, 187, 0);
 }
 
 /* Bottom Bar */
 .footer-bottom {
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 24px;
     display: flex;
     justify-content: space-between;
@@ -117,7 +117,7 @@ footer {
 }
 
 .footer-copyright {
-    color: #666;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.875rem;
     margin: 0;
 }
@@ -128,14 +128,14 @@ footer {
 }
 
 .footer-links a {
-    color: #666;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-size: 0.875rem;
     transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-    color: #000000;
+    color: rgb(255, 187, 0);
 }
 
 @media (max-width: 768px) {
