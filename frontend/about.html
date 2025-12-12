@@ -6,12 +6,84 @@
         <title>About - MonkiiBoard</title>
         <link rel="stylesheet" href="css/styles/body.css">
         <link rel="stylesheet" href="css/styles/header.css">
+        <link rel="stylesheet" href="css/styles/login.css">
+        <link rel="stylesheet" href="css/styles/signup.css">
+        <link rel="stylesheet" href="css/styles/resetpassword.css">
         <link rel="stylesheet" href="css/styles/showcase.css">
         <link rel="stylesheet" href="css/styles/about.css">
         <link rel="stylesheet" href="css/styles/footer.css">
         <script src="js/script.js"></script>
     </head>
     <body>
+        <!-- Login Modal -->
+        <div id="login-modal" class="login-modal">
+            <div class="login-modal-content">
+                <button class="close-modal" onclick="closeLoginModal()">×</button>
+                <div class="login-text">Login</div>
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <div class="password-wrapper">
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <img id="toggle-login-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('login-password', 'toggle-login-password')" />
+                        <div class="password-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="remember-me"> Remember me
+                            </label>
+                            <a href="#" class="forgot-password" onclick="openForgotPasswordModal()">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <button type="submit">Log In</button>
+                    <div class="register-link">
+                        Don't have an account? <a href="#" onclick="openRegisterModal()">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Registration Modal -->
+        <div id="register-modal" class="login-modal">
+            <div class="login-modal-content">
+                <button class="close-modal" onclick="closeRegisterModal()">×</button>
+                <div class="login-text">Sign Up</div>
+                <form class="login-form" onsubmit="handleRegister(event)">
+                    <div class="name-fields">
+                        <input type="text" id="register-firstname" placeholder="First Name" required>
+                        <input type="text" id="register-lastname" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" id="register-email" placeholder="Email" required>
+                    <div class="password-wrapper">
+                        <input type="password" id="register-password" placeholder="Password" required minlength="6">
+                        <img id="toggle-register-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('register-password', 'toggle-register-password')" />
+                    </div>
+                    <div class="password-wrapper">
+                        <input type="password" id="register-confirm-password" placeholder="Confirm Password" required minlength="6">
+                        <img id="toggle-confirm-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('register-confirm-password', 'toggle-confirm-password')" />
+                    </div>
+                    <button type="submit">Create Account</button>
+                    <div class="register-link">
+                        Already have an account? <a href="#" onclick="openLoginModal()">Log in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal -->
+        <div id="forgot-password-modal" class="login-modal">
+            <div class="login-modal-content">
+                <button class="close-modal" onclick="closeForgotPasswordModal()">×</button>
+                <div class="login-text">Reset<br>Password</div>
+                <form class="login-form" onsubmit="handleForgotPassword(event)">
+                    <p>
+                        Enter your email address and we'll send you a link to reset your password.
+                    </p>
+                    <input type="email" id="forgot-email" placeholder="Email" required>
+                    <button type="submit">Send Reset Link</button>
+                    <div class="register-link">
+                        Remember your password? <a href="#" onclick="openLoginModal()">Log in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="header">
             <div class="left-section">
                 <div class="logo-holder">
@@ -24,17 +96,58 @@
 
             <div class="middle-section">
                 <div class="menu-buttons-holder">
-                    <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
-                    <button class="menu-btn" onclick="location.href='setups.html'">SETUPS</button>
-                    <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
-                    <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
+                        <div class="nav-dropdown">
+                            <a href="shop.html" class="nav-dropdown-item">All Products</a>
+                            <a href="shop.html" class="nav-dropdown-item">Keyboards</a>
+                            <a href="shop.html" class="nav-dropdown-item">Desk Mats</a>
+                            <a href="shop.html" class="nav-dropdown-item">PCBs & Components</a>
+                            <a href="shop.html" class="nav-dropdown-item">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='setups.html'">SETUPS</button>
+                        <div class="nav-dropdown">
+                            <a href="setups.html" class="nav-dropdown-item">Featured Setups</a>
+                            <a href="setups.html" class="nav-dropdown-item">Minimal Builds</a>
+                            <a href="setups.html" class="nav-dropdown-item">Gaming Stations</a>
+                            <a href="setups.html" class="nav-dropdown-item">Submit Your Setup</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
+                        <div class="nav-dropdown">
+                            <a href="insights.html" class="nav-dropdown-item">PCB Design Guide</a>
+                            <a href="insights.html" class="nav-dropdown-item">Switch Reviews</a>
+                            <a href="insights.html" class="nav-dropdown-item">Build Tutorials</a>
+                            <a href="insights.html" class="nav-dropdown-item">Industry News</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
+                        <div class="nav-dropdown">
+                            <a href="about.html" class="nav-dropdown-item">Our Story</a>
+                            <a href="about.html" class="nav-dropdown-item">Team</a>
+                            <a href="about.html" class="nav-dropdown-item">Mission</a>
+                            <a href="mailto:hello@monkiiboard.com" class="nav-dropdown-item">Contact Us</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="right-section">
-                <button class="login-holder" onclick="openLoginModal()">
-                    <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
-                </button>
+                <div class="login-wrapper">
+                    <button class="login-holder">
+                        <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
+                    </button>
+                    <div class="login-dropdown">
+                        <a href="#" class="login-dropdown-item" onclick="openLoginModal()">Log In</a>
+                        <a href="#" class="login-dropdown-item" onclick="openRegisterModal()">Sign Up</a>
+                        <a href="#" class="login-dropdown-item" onclick="openForgotPasswordModal()">Reset Password</a>
+                        <a href="about.html" class="login-dropdown-item">Support</a>
+                    </div>
+                </div>
             </div>
         </div>
 

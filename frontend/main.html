@@ -31,17 +31,58 @@
 
             <div class="middle-section">
                 <div class="menu-buttons-holder">
-                    <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
-                    <button class="menu-btn" onclick="location.href='setups.html'">SETUPS</button>
-                    <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
-                    <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
+                        <div class="nav-dropdown">
+                            <a href="shop.html" class="nav-dropdown-item">All Products</a>
+                            <a href="shop.html" class="nav-dropdown-item">Keyboards</a>
+                            <a href="shop.html" class="nav-dropdown-item">Desk Mats</a>
+                            <a href="shop.html" class="nav-dropdown-item">PCBs & Components</a>
+                            <a href="shop.html" class="nav-dropdown-item">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='setups.html'">SETUPS</button>
+                        <div class="nav-dropdown">
+                            <a href="setups.html" class="nav-dropdown-item">Featured Setups</a>
+                            <a href="setups.html" class="nav-dropdown-item">Minimal Builds</a>
+                            <a href="setups.html" class="nav-dropdown-item">Gaming Stations</a>
+                            <a href="setups.html" class="nav-dropdown-item">Submit Your Setup</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
+                        <div class="nav-dropdown">
+                            <a href="insights.html" class="nav-dropdown-item">PCB Design Guide</a>
+                            <a href="insights.html" class="nav-dropdown-item">Switch Reviews</a>
+                            <a href="insights.html" class="nav-dropdown-item">Build Tutorials</a>
+                            <a href="insights.html" class="nav-dropdown-item">Industry News</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
+                        <div class="nav-dropdown">
+                            <a href="about.html" class="nav-dropdown-item">Our Story</a>
+                            <a href="about.html" class="nav-dropdown-item">Team</a>
+                            <a href="about.html" class="nav-dropdown-item">Mission</a>
+                            <a href="mailto:hello@monkiiboard.com" class="nav-dropdown-item">Contact Us</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="right-section">
-                <button class="login-holder" onclick="openLoginModal()">
-                    <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
-                </button>
+                <div class="login-wrapper">
+                    <button class="login-holder">
+                        <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
+                    </button>
+                    <div class="login-dropdown">
+                        <a href="#" class="login-dropdown-item" onclick="openLoginModal()">Log In</a>
+                        <a href="#" class="login-dropdown-item" onclick="openRegisterModal()">Sign Up</a>
+                        <a href="#" class="login-dropdown-item" onclick="openForgotPasswordModal()">Reset Password</a>
+                        <a href="about.html" class="login-dropdown-item">Support</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -223,7 +264,7 @@
 
                     <!-- Setup Gallery -->
                     <div class="showcase-item medium-box">
-                        <div class="showcase-image" style="background-image: url('assets/Images/Desktops/greeny.jpg');">
+                        <div class="showcase-image" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');">
                             <div class="showcase-overlay">
                                 <h3>Minimal Setups</h3>
                                 <p>"Better workspaces = better productivity."</p>
@@ -234,7 +275,7 @@
 
                     <!-- Custom PCBs -->
                     <div class="showcase-item medium-box">
-                        <div class="showcase-image" style="background-image: url('assets/Images/PCBs/Raspberry\ Pi.jpg');">
+                        <div class="showcase-image" style="background-image: url('assets/Images/PCBs/Raspberry\ Pi_Rescaled.jpg');">
                             <div class="showcase-overlay">
                                 <h3>Custom PCBs</h3>
                                 <p>Designed for our products</p>
@@ -257,7 +298,7 @@
 
                     <!-- Accessories -->
                     <div class="showcase-item small-box">
-                        <div class="showcase-image" style="background-image: url('assets/Images/Desktops/warm black.jpg');">
+                        <div class="showcase-image" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');">
                             <div class="showcase-overlay">
                                 <h3>Accessories</h3>
                                 <p>"Small gadgets can make a big difference."</p>
