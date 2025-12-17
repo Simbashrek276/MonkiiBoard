@@ -6,84 +6,13 @@
         <title>Setups - MonkiiBoard</title>
         <link rel="stylesheet" href="css/styles/body.css">
         <link rel="stylesheet" href="css/styles/header.css">
-        <link rel="stylesheet" href="css/styles/login.css">
-        <link rel="stylesheet" href="css/styles/signup.css">
-        <link rel="stylesheet" href="css/styles/resetpassword.css">
-        <link rel="stylesheet" href="css/styles/showcase.css">
+        <link rel="stylesheet" href="css/styles/homepage_background.css">
+        <link rel="stylesheet" href="css/styles/products.css">
         <link rel="stylesheet" href="css/styles/setups.css">
         <link rel="stylesheet" href="css/styles/footer.css">
         <script src="js/script.js"></script>
     </head>
     <body>
-        <!-- Login Modal -->
-        <div id="login-modal" class="login-modal">
-            <div class="login-modal-content">
-                <button class="close-modal" onclick="closeLoginModal()">×</button>
-                <div class="login-text">Login</div>
-                <form class="login-form" onsubmit="handleLogin(event)">
-                    <input type="email" id="login-email" placeholder="Email" required>
-                    <div class="password-wrapper">
-                        <input type="password" id="login-password" placeholder="Password" required>
-                        <img id="toggle-login-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('login-password', 'toggle-login-password')" />
-                        <div class="password-options">
-                            <label class="remember-me">
-                                <input type="checkbox" id="remember-me"> Remember me
-                            </label>
-                            <a href="#" class="forgot-password" onclick="openForgotPasswordModal()">Forgot Password?</a>
-                        </div>
-                    </div>
-                    <button type="submit">Log In</button>
-                    <div class="register-link">
-                        Don't have an account? <a href="#" onclick="openRegisterModal()">Sign up</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Registration Modal -->
-        <div id="register-modal" class="login-modal">
-            <div class="login-modal-content">
-                <button class="close-modal" onclick="closeRegisterModal()">×</button>
-                <div class="login-text">Sign Up</div>
-                <form class="login-form" onsubmit="handleRegister(event)">
-                    <div class="name-fields">
-                        <input type="text" id="register-firstname" placeholder="First Name" required>
-                        <input type="text" id="register-lastname" placeholder="Last Name" required>
-                    </div>
-                    <input type="email" id="register-email" placeholder="Email" required>
-                    <div class="password-wrapper">
-                        <input type="password" id="register-password" placeholder="Password" required minlength="6">
-                        <img id="toggle-register-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('register-password', 'toggle-register-password')" />
-                    </div>
-                    <div class="password-wrapper">
-                        <input type="password" id="register-confirm-password" placeholder="Confirm Password" required minlength="6">
-                        <img id="toggle-confirm-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('register-confirm-password', 'toggle-confirm-password')" />
-                    </div>
-                    <button type="submit">Create Account</button>
-                    <div class="register-link">
-                        Already have an account? <a href="#" onclick="openLoginModal()">Log in</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Forgot Password Modal -->
-        <div id="forgot-password-modal" class="login-modal">
-            <div class="login-modal-content">
-                <button class="close-modal" onclick="closeForgotPasswordModal()">×</button>
-                <div class="login-text">Reset<br>Password</div>
-                <form class="login-form" onsubmit="handleForgotPassword(event)">
-                    <p>
-                        Enter your email address and we'll send you a link to reset your password.
-                    </p>
-                    <input type="email" id="forgot-email" placeholder="Email" required>
-                    <button type="submit">Send Reset Link</button>
-                    <div class="register-link">
-                        Remember your password? <a href="#" onclick="openLoginModal()">Log in</a>
-                    </div>
-                </form>
-            </div>
-        </div>
         <div class="header">
             <div class="left-section">
                 <div class="logo-holder">
@@ -106,13 +35,13 @@
                             <a href="shop.html" class="nav-dropdown-item">Accessories</a>
                         </div>
                     </div>
-                    <div class="menu-btn-wrapper">
+                    <div class="menu-btn-wrapper active">
                         <button class="menu-btn" onclick="location.href='setups.html'">SETUPS</button>
                         <div class="nav-dropdown">
-                            <a href="setups.html" class="nav-dropdown-item">Featured Setups</a>
-                            <a href="setups.html" class="nav-dropdown-item">Minimal Builds</a>
-                            <a href="setups.html" class="nav-dropdown-item">Gaming Stations</a>
-                            <a href="setups.html" class="nav-dropdown-item">Submit Your Setup</a>
+                            <a href="setups.html#featured" class="nav-dropdown-item">Featured Setups</a>
+                            <a href="setups.html#minimal" class="nav-dropdown-item">Minimal Builds</a>
+                            <a href="setups.html#gaming" class="nav-dropdown-item">Gaming Stations</a>
+                            <a href="setups.html#submit" class="nav-dropdown-item">Submit Your Setup</a>
                         </div>
                     </div>
                     <div class="menu-btn-wrapper">
@@ -121,7 +50,6 @@
                             <a href="insights.html" class="nav-dropdown-item">PCB Design Guide</a>
                             <a href="insights.html" class="nav-dropdown-item">Switch Reviews</a>
                             <a href="insights.html" class="nav-dropdown-item">Build Tutorials</a>
-                            <a href="insights.html" class="nav-dropdown-item">Industry News</a>
                         </div>
                     </div>
                     <div class="menu-btn-wrapper">
@@ -142,154 +70,259 @@
                         <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
                     </button>
                     <div class="login-dropdown">
-                        <a href="#" class="login-dropdown-item" onclick="openLoginModal()">Log In</a>
-                        <a href="#" class="login-dropdown-item" onclick="openRegisterModal()">Sign Up</a>
-                        <a href="#" class="login-dropdown-item" onclick="openForgotPasswordModal()">Reset Password</a>
+                        <a href="#" class="login-dropdown-item">Log In</a>
+                        <a href="#" class="login-dropdown-item">Sign Up</a>
+                        <a href="#" class="login-dropdown-item">Reset Password</a>
                         <a href="about.html" class="login-dropdown-item">Support</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Setups Section -->
-        <section class="setups-section">
-            <div class="setups-container">
-                <!-- Hero Section -->
-                <div class="setups-hero">
-                    <h1 class="setups-title">
-                        Minimal <span class="setups-title-accent">Desktop</span> Setups
-                    </h1>
-                    <p class="setups-subtitle">
-                        Discover curated minimal desktop setups that inspire productivity and showcase clean design aesthetics
-                    </p>
+        <!-- Featured Setups Section -->
+        <section id="featured" class="featured-setups-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Setups</h2>
+                    <p class="section-subtitle">Handpicked setups that showcase creativity and functionality</p>
                 </div>
-
-                <!-- Gallery Grid -->
-                <div class="setups-gallery">
-                    <!-- Featured Setup -->
+                
+                <div class="setups-grid">
                     <div class="setup-card featured">
-                        <img src="assets/Images/Desktops/warm black.jpg" alt="Featured Warm Black Setup" class="setup-image">
-                        <div class="setup-content">
-                            <h2 class="setup-title">Warm Black Elegance</h2>
-                            <p class="setup-description">
-                                A sophisticated dark workspace with warm ambient lighting, featuring the MonkiiBoard MK-60 with premium materials and thoughtful design elements.
-                            </p>
-                            <div class="setup-tags">
-                                <span class="setup-tag">Featured</span>
-                                <span class="setup-tag">Dark</span>
-                                <span class="setup-tag">Elegant</span>
+                        <div class="setup-image" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');">
+                            <span class="setup-tag featured">Featured</span>
+                        </div>
+                        <div class="setup-info">
+                            <h3>The Green Machine</h3>
+                            <p class="setup-author">by @alexk_builds</p>
+                            <p class="setup-description">A stunning green-themed setup featuring custom keycaps and perfect cable management.</p>
+                            <div class="setup-specs">
+                                <span class="spec-tag">75% Layout</span>
+                                <span class="spec-tag">Custom Cables</span>
+                                <span class="spec-tag">RGB Lighting</span>
                             </div>
+                            <button class="setup-btn">View Details</button>
                         </div>
                     </div>
 
-                    <!-- Dual Monitor Setup -->
                     <div class="setup-card">
-                        <img src="assets/Images/Desktops/black dual monitor.jpg" alt="Dual Monitor Setup" class="setup-image">
-                        <div class="setup-content">
-                            <h3 class="setup-title">Dual Productivity</h3>
-                            <p class="setup-description">
-                                Maximized screen real estate with clean dual monitor configuration and seamless keyboard integration.
-                            </p>
-                            <div class="setup-tags">
-                                <span class="setup-tag">Dual Screen</span>
-                                <span class="setup-tag">Productivity</span>
+                        <div class="setup-image" style="background-image: url('assets/Images/Desktops/japan.jpg');">
+                        </div>
+                        <div class="setup-info">
+                            <h3>Minimalist Workspace</h3>
+                            <p class="setup-author">by @clean_desk</p>
+                            <p class="setup-description">Clean lines and neutral tones create the perfect productivity environment.</p>
+                            <div class="setup-specs">
+                                <span class="spec-tag">60% Layout</span>
+                                <span class="spec-tag">Wireless</span>
+                                <span class="spec-tag">Wood Accent</span>
                             </div>
+                            <button class="setup-btn">View Details</button>
                         </div>
                     </div>
 
-                    <!-- Black and White Setup -->
                     <div class="setup-card">
-                        <img src="assets/Images/Desktops/black and white 2.jpg" alt="Monochrome Minimal Setup" class="setup-image">
-                        <div class="setup-content">
-                            <h3 class="setup-title">Monochrome Balance</h3>
-                            <p class="setup-description">
-                                Perfect contrast between black and white elements creating a timeless and sophisticated workspace.
-                            </p>
-                            <div class="setup-tags">
-                                <span class="setup-tag">Monochrome</span>
-                                <span class="setup-tag">Contrast</span>
+                        <div class="setup-image" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');">
+                        </div>
+                        <div class="setup-info">
+                            <h3>Dark Theme Pro</h3>
+                            <p class="setup-author">by @darkmode_dev</p>
+                            <p class="setup-description">Professional dark setup with premium materials and subtle lighting.</p>
+                            <div class="setup-specs">
+                                <span class="spec-tag">TKL Layout</span>
+                                <span class="spec-tag">Premium Switches</span>
+                                <span class="spec-tag">Aluminum Case</span>
+                            </div>
+                            <button class="setup-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimal Builds Section -->
+        <section id="minimal" class="minimal-builds-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Minimal Builds</h2>
+                    <p class="section-subtitle">Less is more - clean and functional workspace designs</p>
+                </div>
+                
+                <div class="minimal-grid">
+                    <div class="minimal-item large-minimal">
+                        <div class="minimal-image" style="background-image: url('assets/Images/Desktops/warm yellow.jpg');">
+                            <div class="minimal-overlay">
+                                <h3>Scandinavian Style</h3>
+                                <p>Clean, bright, and functional</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Mac Setup -->
-                    <div class="setup-card">
-                        <img src="assets/Images/Desktops/Mac.jpg" alt="Mac Minimal Setup" class="setup-image">
-                        <div class="setup-content">
-                            <h3 class="setup-title">Apple Ecosystem</h3>
-                            <p class="setup-description">
-                                Seamless integration with Mac devices, featuring aluminum aesthetics and wireless harmony.
-                            </p>
-                            <div class="setup-tags">
-                                <span class="setup-tag">Mac</span>
-                                <span class="setup-tag">Wireless</span>
+                    
+                    <div class="minimal-item">
+                        <div class="minimal-image" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');">
+                            <div class="minimal-overlay">
+                                <h3>Monochrome Setup</h3>
+                                <p>Black and white perfection</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Warm Setup -->
-                    <div class="setup-card">
-                        <img src="assets/Images/Desktops/warm yellow.jpg" alt="Warm Minimalist Setup" class="setup-image">
-                        <div class="setup-content">
-                            <h3 class="setup-title">Warm Minimalism</h3>
-                            <p class="setup-description">
-                                Cozy workspace with warm lighting and thoughtful accessory placement for comfort and style.
-                            </p>
-                            <div class="setup-tags">
-                                <span class="setup-tag">Warm</span>
-                                <span class="setup-tag">Cozy</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Green Setup -->
-                    <div class="setup-card">
-                        <img src="assets/Images/Desktops/greeny.jpg" alt="Nature Inspired Setup" class="setup-image">
-                        <div class="setup-content">
-                            <h3 class="setup-title">Nature Inspired</h3>
-                            <p class="setup-description">
-                                Bringing the outdoors in with natural elements and earth-tone color schemes.
-                            </p>
-                            <div class="setup-tags">
-                                <span class="setup-tag">Nature</span>
-                                <span class="setup-tag">Plants</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Japan Setup -->
-                    <div class="setup-card">
-                        <img src="assets/Images/Desktops/japan.jpg" alt="Japanese Zen Setup" class="setup-image">
-                        <div class="setup-content">
-                            <h3 class="setup-title">Japanese Zen</h3>
-                            <p class="setup-description">
-                                Embracing simplicity and tranquility with Japanese-inspired minimal design principles.
-                            </p>
-                            <div class="setup-tags">
-                                <span class="setup-tag">Zen</span>
-                                <span class="setup-tag">Japanese</span>
+                    
+                    <div class="minimal-item">
+                        <div class="minimal-image" style="background-image: url('assets/Images/Desktops/japan.jpg');">
+                            <div class="minimal-overlay">
+                                <h3>Natural Wood</h3>
+                                <p>Organic materials and textures</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Setup Categories -->
-                <div class="categories-section">
-                    <h2 class="categories-title">
-                        Setup Categories
-                    </h2>
-                    <div class="categories-grid">
-                        <div class="category-card">
-                            <h3 class="category-name">MINIMALIST</h3>
-                            <p class="category-description">Clean lines, neutral colors, essential items only - the art of less is more</p>
+        <!-- Gaming Stations Section -->
+        <section id="gaming" class="gaming-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Gaming Stations</h2>
+                    <p class="section-subtitle">High-performance setups built for competitive gaming</p>
+                </div>
+                
+                <div class="gaming-grid">
+                    <div class="gaming-card">
+                        <div class="gaming-image" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');">
+                            <span class="gaming-tag">60% Layout</span>
                         </div>
-                        <div class="category-card">
-                            <h3 class="category-name">MONOCHROME</h3>
-                            <p class="category-description">Black, white, and shades of gray creating timeless elegance</p>
+                        <div class="gaming-info">
+                            <h3>Esports Ready</h3>
+                            <p class="gaming-author">by @pro_gamer_setup</p>
+                            <div class="gaming-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Switches:</span>
+                                    <span class="spec-value">Linear Red</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Actuation:</span>
+                                    <span class="spec-value">1.9mm</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Polling:</span>
+                                    <span class="spec-value">1000Hz</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="category-card">
-                            <h3 class="category-name">FUNCTIONAL</h3>
-                            <p class="category-description">Form follows function - every item serves a purpose in perfect harmony</p>
+                    </div>
+
+                    <div class="gaming-card">
+                        <div class="gaming-image" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');">
+                            <span class="gaming-tag">TKL Layout</span>
+                        </div>
+                        <div class="gaming-info">
+                            <h3>RGB Battle Station</h3>
+                            <p class="gaming-author">by @rgb_enthusiast</p>
+                            <div class="gaming-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Switches:</span>
+                                    <span class="spec-value">Tactile Brown</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Actuation:</span>
+                                    <span class="spec-value">2.0mm</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Lighting:</span>
+                                    <span class="spec-value">Per-Key RGB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submit Setup Section -->
+        <section id="submit" class="submit-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Submit Your Setup</h2>
+                    <p class="section-subtitle">Share your amazing workspace with our community</p>
+                </div>
+                
+                <div class="submit-content">
+                    <div class="submit-form-container">
+                        <form class="submit-form">
+                            <div class="form-group">
+                                <label for="setup-title">Setup Title</label>
+                                <input type="text" id="setup-title" name="setup-title" placeholder="Give your setup a catchy name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="setup-description">Description</label>
+                                <textarea id="setup-description" name="setup-description" placeholder="Tell us about your setup, components, and inspiration" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="keyboard-layout">Keyboard Layout</label>
+                                    <select id="keyboard-layout" name="keyboard-layout" required>
+                                        <option value="">Select Layout</option>
+                                        <option value="60%">60%</option>
+                                        <option value="65%">65%</option>
+                                        <option value="75%">75%</option>
+                                        <option value="TKL">TKL</option>
+                                        <option value="Full Size">Full Size</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="switch-type">Switch Type</label>
+                                    <select id="switch-type" name="switch-type" required>
+                                        <option value="">Select Switch</option>
+                                        <option value="Linear">Linear</option>
+                                        <option value="Tactile">Tactile</option>
+                                        <option value="Clicky">Clicky</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="setup-category">Category</label>
+                                <select id="setup-category" name="setup-category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Gaming">Gaming</option>
+                                    <option value="Productivity">Productivity</option>
+                                    <option value="Minimal">Minimal</option>
+                                    <option value="RGB">RGB Showcase</option>
+                                    <option value="Custom">Custom Build</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="setup-images">Upload Images</label>
+                                <div class="file-upload">
+                                    <input type="file" id="setup-images" name="setup-images" multiple accept="image/*" required>
+                                    <label for="setup-images" class="file-upload-label">
+                                        Choose Images (Max 5)
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Submit Setup</button>
+                        </form>
+                    </div>
+                    
+                    <div class="submit-guidelines">
+                        <h3>Submission Guidelines</h3>
+                        <ul>
+                            <li>High-quality images (minimum 1920x1080)</li>
+                            <li>Multiple angles of your setup</li>
+                            <li>Good lighting and clean background</li>
+                            <li>Include detailed component list</li>
+                            <li>Original content only</li>
+                            <li>Respectful and appropriate content</li>
+                        </ul>
+                        
+                        <div class="guidelines-note">
+                            <p><strong>Note:</strong> All submissions are reviewed before being featured. We'll notify you via email once your setup is approved!</p>
                         </div>
                     </div>
                 </div>
@@ -363,6 +396,5 @@
                 </div>
             </div>
         </footer>
-
     </body>
 </html>

@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+/* Shop Hero Section */
+.shop-hero-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.shop-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.shop-hero-tagline {
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(255, 187, 0);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.shop-hero-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.shop-hero-title .highlight {
+    color: rgb(255, 187, 0);
+}
+
+.shop-hero-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Filter Section */
+.filter-section {
+    background: #ffffff;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter-header h2 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-dropdown select {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.filter-dropdown select:focus {
+    outline: none;
+    border-color: rgb(255, 187, 0);
+    box-shadow: 0 0 0 3px rgba(255, 187, 0, 0.1);
+}
+
+/* Products Grid Section */
+.products-grid-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 60px 0 80px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.product-tag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-tag.popular {
+    background: rgb(255, 187, 0);
+    color: #000;
+}
+
+.product-tag.new {
+    background: #28a745;
+    color: white;
+}
+
+.product-tag.bestseller {
+    background: #dc3545;
+    color: white;
+}
+
+.product-tag.limited {
+    background: #6f42c1;
+    color: white;
+}
+
+.product-info {
+    padding: 24px;
+}
+
+.product-info h3 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.product-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.product-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.feature-tag {
+    background: rgba(255, 187, 0, 0.1);
+    color: #b8860b;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-price {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgb(255, 187, 0);
+}
+
+.product-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    font-weight: 550;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-family: 'Goldman', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: transparent;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    white-space: nowrap;
+}
+
+.product-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.product-btn:hover::before {
+    left: 0;
+}
+
+.product-btn:hover {
+    color: #ffffff;
+    border-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Active menu indicator */
+.menu-btn-wrapper.active .menu-btn {
+    color: rgb(255, 187, 0);
+    border-bottom: 2px solid rgb(255, 187, 0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shop-hero-section {
+        padding: 100px 0 60px;
+    }
+    
+    .shop-hero-content {
+        padding: 0 20px;
+    }
+    
+    .shop-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .shop-hero-description {
+        font-size: 1rem;
+    }
+    
+    .filter-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-controls {
+        justify-content: stretch;
+    }
+    
+    .filter-dropdown {
+        flex: 1;
+    }
+    
+    .filter-dropdown select {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .product-card {
+        margin: 0 10px;
+    }
+    
+    .product-pricing {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .product-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-hero-title {
+        font-size: 2rem;
+    }
+    
+    .product-info {
+        padding: 20px;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+}

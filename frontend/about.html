@@ -6,84 +6,13 @@
         <title>About - MonkiiBoard</title>
         <link rel="stylesheet" href="css/styles/body.css">
         <link rel="stylesheet" href="css/styles/header.css">
-        <link rel="stylesheet" href="css/styles/login.css">
-        <link rel="stylesheet" href="css/styles/signup.css">
-        <link rel="stylesheet" href="css/styles/resetpassword.css">
-        <link rel="stylesheet" href="css/styles/showcase.css">
+        <link rel="stylesheet" href="css/styles/homepage_background.css">
+        <link rel="stylesheet" href="css/styles/products.css">
         <link rel="stylesheet" href="css/styles/about.css">
         <link rel="stylesheet" href="css/styles/footer.css">
         <script src="js/script.js"></script>
     </head>
     <body>
-        <!-- Login Modal -->
-        <div id="login-modal" class="login-modal">
-            <div class="login-modal-content">
-                <button class="close-modal" onclick="closeLoginModal()">×</button>
-                <div class="login-text">Login</div>
-                <form class="login-form" onsubmit="handleLogin(event)">
-                    <input type="email" id="login-email" placeholder="Email" required>
-                    <div class="password-wrapper">
-                        <input type="password" id="login-password" placeholder="Password" required>
-                        <img id="toggle-login-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('login-password', 'toggle-login-password')" />
-                        <div class="password-options">
-                            <label class="remember-me">
-                                <input type="checkbox" id="remember-me"> Remember me
-                            </label>
-                            <a href="#" class="forgot-password" onclick="openForgotPasswordModal()">Forgot Password?</a>
-                        </div>
-                    </div>
-                    <button type="submit">Log In</button>
-                    <div class="register-link">
-                        Don't have an account? <a href="#" onclick="openRegisterModal()">Sign up</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Registration Modal -->
-        <div id="register-modal" class="login-modal">
-            <div class="login-modal-content">
-                <button class="close-modal" onclick="closeRegisterModal()">×</button>
-                <div class="login-text">Sign Up</div>
-                <form class="login-form" onsubmit="handleRegister(event)">
-                    <div class="name-fields">
-                        <input type="text" id="register-firstname" placeholder="First Name" required>
-                        <input type="text" id="register-lastname" placeholder="Last Name" required>
-                    </div>
-                    <input type="email" id="register-email" placeholder="Email" required>
-                    <div class="password-wrapper">
-                        <input type="password" id="register-password" placeholder="Password" required minlength="6">
-                        <img id="toggle-register-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('register-password', 'toggle-register-password')" />
-                    </div>
-                    <div class="password-wrapper">
-                        <input type="password" id="register-confirm-password" placeholder="Confirm Password" required minlength="6">
-                        <img id="toggle-confirm-password" src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" onclick="togglePassword('register-confirm-password', 'toggle-confirm-password')" />
-                    </div>
-                    <button type="submit">Create Account</button>
-                    <div class="register-link">
-                        Already have an account? <a href="#" onclick="openLoginModal()">Log in</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Forgot Password Modal -->
-        <div id="forgot-password-modal" class="login-modal">
-            <div class="login-modal-content">
-                <button class="close-modal" onclick="closeForgotPasswordModal()">×</button>
-                <div class="login-text">Reset<br>Password</div>
-                <form class="login-form" onsubmit="handleForgotPassword(event)">
-                    <p>
-                        Enter your email address and we'll send you a link to reset your password.
-                    </p>
-                    <input type="email" id="forgot-email" placeholder="Email" required>
-                    <button type="submit">Send Reset Link</button>
-                    <div class="register-link">
-                        Remember your password? <a href="#" onclick="openLoginModal()">Log in</a>
-                    </div>
-                </form>
-            </div>
-        </div>
         <div class="header">
             <div class="left-section">
                 <div class="logo-holder">
@@ -121,15 +50,14 @@
                             <a href="insights.html" class="nav-dropdown-item">PCB Design Guide</a>
                             <a href="insights.html" class="nav-dropdown-item">Switch Reviews</a>
                             <a href="insights.html" class="nav-dropdown-item">Build Tutorials</a>
-                            <a href="insights.html" class="nav-dropdown-item">Industry News</a>
                         </div>
                     </div>
-                    <div class="menu-btn-wrapper">
+                    <div class="menu-btn-wrapper active">
                         <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
                         <div class="nav-dropdown">
-                            <a href="about.html" class="nav-dropdown-item">Our Story</a>
-                            <a href="about.html" class="nav-dropdown-item">Team</a>
-                            <a href="about.html" class="nav-dropdown-item">Mission</a>
+                            <a href="about.html#story" class="nav-dropdown-item">Our Story</a>
+                            <a href="about.html#team" class="nav-dropdown-item">Team</a>
+                            <a href="about.html#mission" class="nav-dropdown-item">Mission</a>
                             <a href="mailto:hello@monkiiboard.com" class="nav-dropdown-item">Contact Us</a>
                         </div>
                     </div>
@@ -142,144 +70,302 @@
                         <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
                     </button>
                     <div class="login-dropdown">
-                        <a href="#" class="login-dropdown-item" onclick="openLoginModal()">Log In</a>
-                        <a href="#" class="login-dropdown-item" onclick="openRegisterModal()">Sign Up</a>
-                        <a href="#" class="login-dropdown-item" onclick="openForgotPasswordModal()">Reset Password</a>
+                        <a href="#" class="login-dropdown-item">Log In</a>
+                        <a href="#" class="login-dropdown-item">Sign Up</a>
+                        <a href="#" class="login-dropdown-item">Reset Password</a>
                         <a href="about.html" class="login-dropdown-item">Support</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- About Section -->
-        <section class="showcase-section about-section">
-            <div class="showcase-container">
-                <!-- Hero -->
-                <div class="about-hero">
-                    <h1 class="about-title">
-                        About <span class="about-title-accent">MonkiiBoard</span>
-                    </h1>
-                    <p class="about-subtitle">
-                        We believe that the best tools are the onesss you don't have to think about. They just work, beautifully and intuitively.
-                    </p>
-                </div>
+        <!-- About Hero Section -->
+        <section class="about-hero-section">
+            <div class="about-hero-content">
+                <div class="about-hero-tagline">WHO WE ARE</div>
+                <h1 class="about-hero-title">
+                    Building the <span class="highlight">Future</span><br>of Keyboards
+                </h1>
+                <p class="about-hero-description">
+                    We're a passionate team of engineers and designers dedicated to creating the world's most innovative mechanical keyboards and components.
+                </p>
+            </div>
+        </section>
 
-                <!-- Mission -->
-                <div class="mission-section">
-                    <div class="mission-content">
-                        <div class="mission-visual">
-                            <span class="mission-visual-text">MONKII</span>
-                        </div>
-                        <div class="mission-text">
-                            <h2 class="mission-title">Our Mission</h2>
-                            <p class="mission-description">
-                                To create mechanical keyboards and desktop accessories that embody the principles of minimalism: <span class="mission-highlight">simplicity, functionality, and beauty</span>.
-                            </p>
-                            <p class="mission-description">
-                                Every MonkiiBoard product is designed to enhance your workflow without cluttering your workspace, both physically and mentally.
-                            </p>
-                        </div>
-                    </div>
+        <!-- Our Story Section -->
+        <section id="story" class="story-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="section-subtitle">From basement tinkering to industry innovation</p>
                 </div>
+                
+                <div class="story-content">
+                    <div class="story-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2019</div>
+                            <div class="timeline-content">
+                                <h3>The Beginning</h3>
+                                <p>Started as a weekend project by two engineering students frustrated with the lack of truly customizable keyboards.</p>
+                            </div>
+                        </div>
 
-                <!-- Values -->
-                <div class="values-section">
-                    <h2 class="values-title">Our Values</h2>
-                    <div class="values-grid">
-                        <div class="value-card">
-                            <div class="value-icon">
-                                <span class="value-icon-text">M</span>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-content">
+                                <h3>First Prototype</h3>
+                                <p>Created our first custom PCB design with hot-swappable switches and revolutionary matrix layout.</p>
                             </div>
-                            <h3 class="value-name">Minimal</h3>
-                            <p class="value-description">
-                                Less is more. We eliminate the unnecessary to focus on what truly matters: pure functionality and clean design.
-                            </p>
                         </div>
-                        <div class="value-card">
-                            <div class="value-icon">
-                                <span class="value-icon-text">Q</span>
-                            </div>
-                            <h3 class="value-name">Quality</h3>
-                            <p class="value-description">
-                                Premium materials, precision manufacturing, and rigorous testing ensure every product meets our exacting standards.
-                            </p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon">
-                                <span class="value-icon-text">C</span>
-                            </div>
-                            <h3 class="value-name">Community</h3>
-                            <p class="value-description">
-                                We're more than a brand – we're a community of minimalists, creators, and professionals who share our vision.
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Story -->
-                <div class="story-section">
-                    <div class="story-content">
-                        <div class="story-text">
-                            <h2 class="story-title">Our Story</h2>
-                            <p class="story-paragraph">
-                                MonkiiBoard was born from a simple frustration: why are most mechanical keyboards so cluttered and over-engineered? 
-                            </p>
-                            <p class="story-paragraph">
-                                Founded in 2023 by a team of designers and engineers who believed that the best tools should be invisible, we set out to create keyboards that enhance productivity without demanding attention.
-                            </p>
-                            <p class="story-paragraph">
-                                Today, MonkiiBoard serves minimalists, professionals, and creators worldwide who value quality, simplicity, and thoughtful design.
-                            </p>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2021</div>
+                            <div class="timeline-content">
+                                <h3>Community Growth</h3>
+                                <p>Launched our online community and began sharing open-source designs with fellow keyboard enthusiasts.</p>
+                            </div>
                         </div>
-                        <div class="story-visual">
-                            <div class="story-visual-content">
-                                <span class="story-label">Founded in</span>
-                                <span class="story-year">2025</span>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2022</div>
+                            <div class="timeline-content">
+                                <h3>Going Professional</h3>
+                                <p>Established MonkiiBoard as a company and launched our first commercial product line.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-content">
+                                <h3>Innovation Breakthrough</h3>
+                                <p>Developed breakthrough wireless technology and advanced switch matrix designs.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">
+                                <h3>Global Expansion</h3>
+                                <p>Expanded worldwide and became a trusted name in the mechanical keyboard community.</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Team -->
-                <div class="team-section">
-                    <h2 class="team-title">Meet The Team</h2>
-                    <div class="team-grid">
-                        <div class="team-member">
-                            <div class="team-avatar">
-                                <span class="team-avatar-text">A</span>
-                            </div>
-                            <h3 class="team-name">Huy Hoang Le</h3>
-                            <p class="team-role">Founder & Engineer</p>
-                            <p class="team-bio">PCB Designer and Computer Engineer Enthusiast</p>
+                    <div class="story-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label">Keyboards Shipped</div>
                         </div>
-                        <div class="team-member">
-                            <div class="team-avatar">
-                                <span class="team-avatar-text">S</span>
-                            </div>
-                            <h3 class="team-name">Minh Duc Doan</h3>
-                            <p class="team-role">Lead Technician</p>
-                            <p class="team-bio">PCB Designer and Content Developer</p>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Countries Reached</div>
                         </div>
-                        <div class="team-member">
-                            <div class="team-avatar">
-                                <span class="team-avatar-text">M</span>
-                            </div>
-                            <h3 class="team-name">MIKE JOHNSON</h3>
-                            <p class="team-role">Operations Director</p>
-                            <p class="team-bio">Manufacturing and quality control specialist</p>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Open Source Projects</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">99.5%</div>
+                            <div class="stat-label">Customer Satisfaction</div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Contact CTA -->
-                <div class="contact-cta">
-                    <h2 class="contact-title">Get In Touch</h2>
-                    <p class="contact-text">
-                        Have questions? Want to collaborate? We'd love to hear from you.
-                    </p>
-                    <button class="contact-button" onclick="window.location.href='mailto:hello@monkiiboard.com'">
-                        Contact Us
-                    </button>
+        <!-- Mission Section -->
+        <section id="mission" class="mission-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p class="section-subtitle">Revolutionizing the way we interact with technology</p>
+                </div>
+                
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Innovation First</h3>
+                        <p>We push the boundaries of what's possible in keyboard technology, from PCB design to switch engineering.</p>
+                    </div>
+
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Community Driven</h3>
+                        <p>Our designs are shaped by feedback from enthusiasts, professionals, and everyday users worldwide.</p>
+                    </div>
+
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>Quality Assured</h3>
+                        <p>Every product undergoes rigorous testing to ensure durability, performance, and long-term reliability.</p>
+                    </div>
+
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h3>Sustainable Future</h3>
+                        <p>We're committed to environmentally responsible manufacturing and designing products that last decades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Meet Our Team</h2>
+                    <p class="section-subtitle">The passionate minds behind MonkiiBoard</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');">
+                        </div>
+                        <div class="member-info">
+                            <h3>Alex Chen</h3>
+                            <p class="member-role">Co-Founder & CTO</p>
+                            <p class="member-bio">Electrical engineer with 10+ years in PCB design. Specializes in signal integrity and EMC optimization.</p>
+                            <div class="member-social">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo" style="background-image: url('assets/Images/Desktops/japan.jpg');">
+                        </div>
+                        <div class="member-info">
+                            <h3>Sarah Kim</h3>
+                            <p class="member-role">Co-Founder & CEO</p>
+                            <p class="member-bio">Industrial designer passionate about human-computer interaction and ergonomic product design.</p>
+                            <div class="member-social">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">Dribbble</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');">
+                        </div>
+                        <div class="member-info">
+                            <h3>Marcus Rodriguez</h3>
+                            <p class="member-role">Lead Engineer</p>
+                            <p class="member-bio">Firmware developer and mechanical engineer. Expert in switch technology and actuation mechanisms.</p>
+                            <div class="member-social">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo" style="background-image: url('assets/Images/Desktops/warm yellow.jpg');">
+                        </div>
+                        <div class="member-info">
+                            <h3>Emily Zhang</h3>
+                            <p class="member-role">UX Designer</p>
+                            <p class="member-bio">User experience designer focused on making complex technology accessible to everyone.</p>
+                            <div class="member-social">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">Behance</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">We'd love to hear from you</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Name</label>
+                                    <input type="text" id="contact-name" name="contact-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-email">Email</label>
+                                    <input type="email" id="contact-email" name="contact-email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <select id="contact-subject" name="contact-subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="media">Media & Press</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="contact-btn">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM PST<br>
+                            Saturday: 10:00 AM - 4:00 PM PST<br>
+                            Sunday: Closed</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h3>Email Support</h3>
+                            <p><strong>General:</strong> hello@monkiiboard.com<br>
+                            <strong>Technical:</strong> support@monkiiboard.com<br>
+                            <strong>Business:</strong> partnerships@monkiiboard.com</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h3>Response Time</h3>
+                            <p>We typically respond to all inquiries within 24 hours during business days. For urgent technical support, please use our priority support channel.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -351,6 +437,5 @@
                 </div>
             </div>
         </footer>
-
     </body>
 </html>
