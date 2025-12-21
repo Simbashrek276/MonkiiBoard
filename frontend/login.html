@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MonkiiBoard</title>
+    <link rel="stylesheet" href="css/styles/body.css">
+    <link rel="stylesheet" href="css/styles/login.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .login-page-container {
+            width: 100%;
+            max-width: 450px;
+            margin: 20px;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .login-header {
+            background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #ffc947 100%);
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .login-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .login-header h1 {
+            font-family: 'Goldman', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #000;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .login-header p {
+            font-size: 0.95rem;
+            color: rgba(0, 0, 0, 0.7);
+            margin: 0;
+        }
+
+        .login-body {
+            padding: 40px 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Goldman', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            color: #333;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: rgb(255, 187, 0);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(255, 187, 0, 0.1);
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .eye-icon:hover {
+            opacity: 1;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+            accent-color: rgb(255, 187, 0);
+        }
+
+        .forgot-link {
+            font-size: 0.9rem;
+            color: rgb(255, 187, 0);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-link:hover {
+            color: #e6a800;
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px 30px;
+            font-family: 'Goldman', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            background: linear-gradient(135deg, rgb(255, 187, 0) 0%, #ffc947 100%);
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 187, 0, 0.4);
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: rgb(255, 187, 0);
+        }
+
+        .divider {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: #e0e0e0;
+        }
+
+        .divider span {
+            position: relative;
+            background: white;
+            padding: 0 15px;
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        .signup-link {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: rgb(255, 187, 0);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 5px;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-home a {
+            color: rgb(255, 187, 0);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-home a:hover {
+            text-decoration: underline;
+            gap: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .login-page-container {
+                margin: 10px;
+            }
+
+            .login-header {
+                padding: 30px 20px;
+            }
+
+            .login-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .login-body {
+                padding: 30px 20px;
+            }
+
+            .form-group input {
+                padding: 12px 16px;
+            }
+
+            .form-options {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-page-container">
+        <div class="login-card">
+            <div class="login-header">
+                <img src="assets/logo/logo.jpg" alt="MonkiiBoard Logo" class="login-logo">
+                <h1>Welcome Back</h1>
+                <p>Sign in to your MonkiiBoard account</p>
+            </div>
+            <div class="login-body">
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <img src="assets/Images/UI/eye-password-hide.svg" alt="Show Password" class="eye-icon" id="togglePassword" onclick="togglePasswordVisibility()">
+                        </div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            Remember me
+                        </label>
+                        <a href="forgot-password.html" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Sign In</button>
+                </form>
+                
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                
+                <div class="signup-link">
+                    Don't have an account?<a href="signup.html">Create one here</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-home">
+            <a href="main.html">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('togglePassword');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.src = 'assets/Images/UI/eye-password-show.svg';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.src = 'assets/Images/UI/eye-password-hide.svg';
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('rememberMe').checked;
+            
+            // Simulate login process
+            console.log('Login attempt:', { email, rememberMe });
+            
+            // Here you would typically send data to your backend
+            alert('Login functionality would be implemented here');
+            
+            // Redirect to main page after successful login
+            // window.location.href = 'main.html';
+        }
+    </script>
+</body>
+</html>
