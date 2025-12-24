@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+/* Hero Section */
+.handwiring-hero-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.handwiring-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.handwiring-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.handwiring-hero-tagline {
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(255, 187, 0);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.handwiring-hero-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.handwiring-hero-title .highlight {
+    color: rgb(255, 187, 0);
+}
+
+.handwiring-hero-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Guide Section */
+.guide-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 0;
+}
+
+.guide-intro {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.guide-intro p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.guide-steps {
+    display: grid;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid rgb(255, 187, 0);
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(255, 187, 0, 0.15);
+}
+
+.step-number {
+    font-family: 'Goldman', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255, 187, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.step-card h3 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.step-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.step-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.step-card ul li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.step-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: rgb(255, 187, 0);
+    font-weight: bold;
+}
+
+.info-box, .warning-box {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.info-box {
+    background: rgba(255, 187, 0, 0.1);
+    border-left: 3px solid rgb(255, 187, 0);
+    color: #333;
+}
+
+.warning-box {
+    background: rgba(220, 53, 69, 0.1);
+    border-left: 3px solid #dc3545;
+    color: #333;
+}
+
+.tips-section {
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+.tips-section h3 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 187, 0, 0.15);
+}
+
+.tip-card h4 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.1rem;
+    color: rgb(255, 187, 0);
+    margin-bottom: 10px;
+}
+
+.tip-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .handwiring-hero-section {
+        padding: 100px 0 60px;
+    }
+    
+    .handwiring-hero-content {
+        padding: 0 20px;
+    }
+    
+    .handwiring-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .handwiring-hero-description {
+        font-size: 1rem;
+    }
+    
+    .step-card {
+        padding: 25px;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .handwiring-hero-title {
+        font-size: 2rem;
+    }
+    
+    .step-number {
+        font-size: 2rem;
+    }
+}

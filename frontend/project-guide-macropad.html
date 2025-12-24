@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MonkiiPad Macro Build Guide - MonkiiBoard</title>
+        <link rel="stylesheet" href="css/styles/body.css">
+        <link rel="stylesheet" href="css/styles/header.css">
+        <link rel="stylesheet" href="css/styles/build-guide.css">
+        <link rel="stylesheet" href="css/styles/footer.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="left-section">
+                <div class="logo-holder">
+                    <a href="main.html">
+                        <img class="logo" src="assets/logo/logo.jpg" alt="MonkiiBoard Logo">
+                        <span class="logo-text"><span class="highlight">Monkii</span>Board</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="middle-section">
+                <div class="menu-buttons-holder">
+                    <div class="menu-btn-wrapper active">
+                        <button class="menu-btn" onclick="location.href='projects.html'">PROJECTS</button>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
+                        <div class="nav-dropdown">
+                            <a href="handwiring.html" class="nav-dropdown-item">Handwiring Guide</a>
+                            <a href="insights.html#pcb-guide" class="nav-dropdown-item">PCB Design Guide</a>
+                            <a href="insights.html#switch-reviews" class="nav-dropdown-item">Switch Reviews</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
+                        <div class="nav-dropdown">
+                            <a href="about.html#story" class="nav-dropdown-item">Our Story</a>
+                            <a href="about.html#team" class="nav-dropdown-item">Team</a>
+                            <a href="about.html#mission" class="nav-dropdown-item">Mission</a>
+                            <a href="mailto:hello@monkiiboard.com" class="nav-dropdown-item">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="login-wrapper">
+                    <button class="login-holder">
+                        <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
+                    </button>
+                    <div class="login-dropdown">
+                        <a href="login.html" class="login-dropdown-item">Log In</a>
+                        <a href="signup.html" class="login-dropdown-item">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guide Hero -->
+        <section class="guide-hero">
+            <div class="guide-hero-content">
+                <a href="projects.html" class="back-link">← Back to Projects</a>
+                <h1 class="guide-title">MonkiiPad Macro <span class="highlight">Build Guide</span></h1>
+                <p class="guide-subtitle">Build your own programmable 12-key macropad for productivity</p>
+            </div>
+        </section>
+
+        <!-- Guide Content -->
+        <section class="guide-content-section">
+            <div class="guide-container">
+                
+                <!-- Prerequisites -->
+                <div class="guide-section">
+                    <h2 class="section-heading">Prerequisites</h2>
+                    <div class="prerequisites-grid">
+                        <div class="prereq-card">
+                            <h3>Time Required</h3>
+                            <p>1-2 hours</p>
+                        </div>
+                        <div class="prereq-card">
+                            <h3>Skill Level</h3>
+                            <p>Beginner</p>
+                        </div>
+                        <div class="prereq-card">
+                            <h3>Tools Needed</h3>
+                            <p>Screwdriver, Soldering iron (optional)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parts List -->
+                <div class="guide-section">
+                    <h2 class="section-heading">What You'll Need</h2>
+                    <div class="parts-list">
+                        <div class="part-item">
+                            <div class="part-number">1</div>
+                            <div class="part-info">
+                                <h3>MonkiiPad PCB</h3>
+                                <p>12-key hot-swap PCB with rotary encoder support</p>
+                            </div>
+                        </div>
+                        <div class="part-item">
+                            <div class="part-number">2</div>
+                            <div class="part-info">
+                                <h3>Acrylic Case Layers</h3>
+                                <p>Laser-cut acrylic case pieces</p>
+                            </div>
+                        </div>
+                        <div class="part-item">
+                            <div class="part-number">3</div>
+                            <div class="part-info">
+                                <h3>Mechanical Switches (12x)</h3>
+                                <p>Cherry MX compatible switches</p>
+                            </div>
+                        </div>
+                        <div class="part-item">
+                            <div class="part-number">4</div>
+                            <div class="part-info">
+                                <h3>1u Keycaps (12x)</h3>
+                                <p>Standard 1u profile keycaps</p>
+                            </div>
+                        </div>
+                        <div class="part-item">
+                            <div class="part-number">5</div>
+                            <div class="part-info">
+                                <h3>Rotary Encoder (Optional)</h3>
+                                <p>EC11 rotary encoder with knob</p>
+                            </div>
+                        </div>
+                        <div class="part-item">
+                            <div class="part-number">6</div>
+                            <div class="part-info">
+                                <h3>Hardware Kit</h3>
+                                <p>M2 screws, standoffs, and USB-C cable</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Steps -->
+                <div class="guide-section">
+                    <h2 class="section-heading">Build Steps</h2>
+
+                    <!-- Step 1 -->
+                    <div class="build-step">
+                        <div class="step-header">
+                            <div class="step-number">Step 1</div>
+                            <h3>Prepare Case Layers</h3>
+                        </div>
+                        <div class="step-image" style="background-image: url('assets/Images/Desktops/warm yellow.jpg');"></div>
+                        <div class="step-content">
+                            <p>Unpack and prepare all acrylic case layers for assembly.</p>
+                            <ul class="step-instructions">
+                                <li>Remove protective film from all acrylic pieces</li>
+                                <li>Identify bottom, middle, and top layers</li>
+                                <li>Clean any residue with microfiber cloth</li>
+                                <li>Organize M2 screws and standoffs</li>
+                            </ul>
+                            <div class="tip-box">
+                                <strong>💡 Pro Tip:</strong> Keep the protective film on until final assembly to avoid scratches!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="build-step">
+                        <div class="step-header">
+                            <div class="step-number">Step 2</div>
+                            <h3>Install Bottom Standoffs</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Attach M2 standoffs to the bottom acrylic layer.</p>
+                            <ul class="step-instructions">
+                                <li>Place bottom layer on flat surface</li>
+                                <li>Insert M2 screws through mounting holes from bottom</li>
+                                <li>Thread standoffs onto screws from top side</li>
+                                <li>Tighten securely but don't over-tighten acrylic</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="build-step">
+                        <div class="step-header">
+                            <div class="step-number">Step 3</div>
+                            <h3>Install Rotary Encoder (Optional)</h3>
+                        </div>
+                        <div class="step-image" style="background-image: url('assets/Images/Desktops/japan.jpg');"></div>
+                        <div class="step-content">
+                            <p>If using a rotary encoder, solder it to the PCB now.</p>
+                            <ul class="step-instructions">
+                                <li>Insert encoder legs through PCB holes</li>
+                                <li>Ensure encoder is flush with PCB</li>
+                                <li>Solder all 5 pins from the bottom</li>
+                                <li>Clip excess pin length</li>
+                                <li>Test encoder rotation before continuing</li>
+                            </ul>
+                            <div class="warning-box">
+                                <strong>⚠️ Warning:</strong> Use proper ventilation when soldering and avoid breathing fumes!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="build-step">
+                        <div class="step-header">
+                            <div class="step-number">Step 4</div>
+                            <h3>Insert Switches</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Install your 12 mechanical switches into the hot-swap sockets.</p>
+                            <ul class="step-instructions">
+                                <li>Check all switch pins are straight</li>
+                                <li>Align switch with hot-swap socket</li>
+                                <li>Press down firmly until switch clicks in</li>
+                                <li>Repeat for all 12 positions</li>
+                                <li>Verify all switches are fully seated</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="build-step">
+                        <div class="step-header">
+                            <div class="step-number">Step 5</div>
+                            <h3>Stack Case Layers</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Assemble the acrylic case by stacking all layers.</p>
+                            <ul class="step-instructions">
+                                <li>Place middle layers onto standoffs</li>
+                                <li>Carefully lower PCB onto middle layers</li>
+                                <li>Add top acrylic layer</li>
+                                <li>Insert screws through top and tighten into standoffs</li>
+                                <li>Ensure USB port is accessible</li>
+                            </ul>
+                            <div class="tip-box">
+                                <strong>💡 Pro Tip:</strong> Tighten screws in a star pattern for even pressure distribution!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="build-step">
+                        <div class="step-header">
+                            <div class="step-number">Step 6</div>
+                            <h3>Program Firmware</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Flash QMK firmware and configure your macros.</p>
+                            <ul class="step-instructions">
+                                <li>Connect macropad via USB-C</li>
+                                <li>Flash MonkiiPad firmware using QMK Toolbox</li>
+                                <li>Open VIA configurator</li>
+                                <li>Program each key with desired macro or function</li>
+                                <li>Create multiple layers for different workflows</li>
+                                <li>Configure rotary encoder if installed</li>
+                            </ul>
+                            <div class="tip-box">
+                                <strong>💡 Pro Tip:</strong> Use layers to have 24, 36, or even 48 different macros accessible!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="build-step">
+                        <div class="step-header">
+                            <div class="step-number">Step 7</div>
+                            <h3>Install Keycaps</h3>
+                        </div>
+                        <div class="step-content">
+                            <p>Add keycaps and optional encoder knob to complete your build.</p>
+                            <ul class="step-instructions">
+                                <li>Press keycaps onto all 12 switches</li>
+                                <li>If using encoder, attach the knob</li>
+                                <li>Test all keys and macros</li>
+                                <li>Customize RGB lighting if desired</li>
+                            </ul>
+                            <div class="success-box">
+                                <strong>🎉 Congratulations!</strong> Your MonkiiPad Macro is ready to boost your productivity!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usage Ideas -->
+                <div class="guide-section">
+                    <h2 class="section-heading">Usage Ideas</h2>
+                    <div class="troubleshooting-list">
+                        <div class="troubleshoot-item">
+                            <h3>Video Editing</h3>
+                            <p>Map timeline controls, cut, trim, and effects to dedicated keys for faster editing.</p>
+                        </div>
+                        <div class="troubleshoot-item">
+                            <h3>Design Work</h3>
+                            <p>Quick access to Photoshop tools, layer controls, and brush shortcuts.</p>
+                        </div>
+                        <div class="troubleshoot-item">
+                            <h3>Streaming</h3>
+                            <p>Control scene switching, mute/unmute, start/stop recording, and more.</p>
+                        </div>
+                        <div class="troubleshoot-item">
+                            <h3>Music Production</h3>
+                            <p>Transport controls, track arming, loop controls, and plugin shortcuts.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand">
+                            <img src="assets/logo/logo.jpg" alt="MonkiiBoard" class="footer-logo">
+                            <span class="footer-brand-name">MonkiiBoard</span>
+                        </div>
+                        <p class="footer-description">
+                            Creating innovative solutions for the modern workspace, especially for your keyboard.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+                            <a href="#" class="footer-social-link" aria-label="GitHub">⚙</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="shop.html">PCB Designs</a></li>
+                            <li><a href="shop.html">Custom Boards</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="insights.html">Technology</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div>
+                        <p class="footer-copyright">© 2025 MonkiiBoard. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

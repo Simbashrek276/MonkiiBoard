@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MonkiiPCB Pro - MonkiiBoard</title>
+        <link rel="stylesheet" href="css/styles/body.css">
+        <link rel="stylesheet" href="css/styles/header.css">
+        <link rel="stylesheet" href="css/styles/product.css">
+        <link rel="stylesheet" href="css/styles/footer.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <!-- ...existing header code... -->
+        <div class="header">
+            <div class="left-section">
+                <div class="logo-holder">
+                    <a href="main.html">
+                        <img class="logo" src="assets/logo/logo.jpg" alt="MonkiiBoard Logo">
+                        <span class="logo-text"><span class="highlight">Monkii</span>Board</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="middle-section">
+                <div class="menu-buttons-holder">
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='projects.html'">PROJECTS</button>
+                    </div>
+                    <div class="menu-btn-wrapper active">
+                        <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
+                        <div class="nav-dropdown">
+                            <a href="handwiring.html" class="nav-dropdown-item">Handwiring Guide</a>
+                            <a href="insights.html#pcb-guide" class="nav-dropdown-item">PCB Design Guide</a>
+                            <a href="insights.html#switch-reviews" class="nav-dropdown-item">Switch Reviews</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
+                        <div class="nav-dropdown">
+                            <a href="about.html#story" class="nav-dropdown-item">Our Story</a>
+                            <a href="about.html#team" class="nav-dropdown-item">Team</a>
+                            <a href="about.html#mission" class="nav-dropdown-item">Mission</a>
+                            <a href="mailto:hello@monkiiboard.com" class="nav-dropdown-item">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="login-wrapper">
+                    <button class="login-holder">
+                        <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
+                    </button>
+                    <div class="login-dropdown">
+                        <a href="login.html" class="login-dropdown-item">Log In</a>
+                        <a href="signup.html" class="login-dropdown-item">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="product-page-section">
+            <div class="product-container">
+                <div class="product-layout">
+                    <div class="product-images">
+                        <div class="main-image" style="background-image: url('assets/Images/PCBs/Keeb60.png');"></div>
+                        <div class="image-thumbnails">
+                            <div class="thumbnail active" style="background-image: url('assets/Images/PCBs/Keeb60.png');"></div>
+                            <div class="thumbnail" style="background-image: url('assets/Images/PCBs/Raspberry\ Pi_Rescaled.jpg');"></div>
+                            <div class="thumbnail" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');"></div>
+                            <div class="thumbnail" style="background-image: url('assets/Images/Desktops/japan.jpg');"></div>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <span class="product-badge">Best Seller</span>
+                        <h1 class="product-title">MonkiiPCB Pro</h1>
+                        
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">No reviews yet</span>
+                        </div>
+
+                        <div class="product-price">$49</div>
+
+                        <p class="product-description">
+                            Our flagship PCB design combining hot-swappable functionality with advanced features. The MonkiiPCB Pro features RGB underglow, wireless compatibility, and optimized matrix routing for minimal latency. Perfect for custom keyboard builds with QMK/VIA support for ultimate programmability.
+                        </p>
+
+                        <div class="product-options">
+                            <div class="option-group">
+                                <label class="option-label">Quantity</label>
+                                <div class="quantity-selector">
+                                    <input type="number" class="quantity-input" value="1" readonly style="cursor: not-allowed;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">♥</button>
+                        </div>
+
+                        <div class="product-features-list">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Hot-swappable switch sockets</li>
+                                <li>RGB underglow (16.8M colors)</li>
+                                <li>Wireless module compatible</li>
+                                <li>USB-C connectivity</li>
+                                <li>QMK & VIA programmable</li>
+                                <li>ESD protection circuitry</li>
+                                <li>Gold-plated pads</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="specifications">Specifications</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews (0)</button>
+                    </div>
+
+                    <div class="tab-content active" id="specifications">
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">PCB Type</span>
+                                <span class="spec-value">Hot-swappable</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">MCU</span>
+                                <span class="spec-value">ATmega32U4</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">RGB Lighting</span>
+                                <span class="spec-value">Underglow (WS2812B)</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Connectivity</span>
+                                <span class="spec-value">USB-C, Wireless ready</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Firmware</span>
+                                <span class="spec-value">QMK/VIA</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Layers</span>
+                                <span class="spec-value">4-layer PCB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Protection</span>
+                                <span class="spec-value">ESD & overcurrent</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Dimensions</span>
+                                <span class="spec-value">285 x 95mm (60%)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="reviews">
+                        <div class="reviews-section">
+                            <div class="review-summary">
+                                <h3>Customer Reviews</h3>
+                                <p class="no-reviews">No reviews yet. Be the first to review this product!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ...existing footer code... -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand">
+                            <img src="assets/logo/logo.jpg" alt="MonkiiBoard" class="footer-logo">
+                            <span class="footer-brand-name">MonkiiBoard</span>
+                        </div>
+                        <p class="footer-description">
+                            Creating innovative solutions for the modern workspace, especially for your keyboard.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+                            <a href="#" class="footer-social-link" aria-label="GitHub">⚙</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="shop.html">PCB Designs</a></li>
+                            <li><a href="shop.html">Custom Boards</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="insights.html">Technology</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div>
+                        <p class="footer-copyright">© 2025 MonkiiBoard. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/product.js"></script>
+    </body>
+</html>

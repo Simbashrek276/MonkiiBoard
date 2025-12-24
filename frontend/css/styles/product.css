@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+/* Product Page Layout */
+.product-page-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 100px 0 80px;
+}
+
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.product-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/* Product Images */
+.product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.thumbnail {
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    border-color: rgb(255, 187, 0);
+    transform: scale(1.05);
+}
+
+/* Product Details */
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgb(255, 187, 0);
+    color: #000;
+    border-radius: 20px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.product-title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: rgb(255, 187, 0);
+    font-size: 1.2rem;
+}
+
+.rating-text {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.product-price {
+    font-family: 'Goldman', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(255, 187, 0);
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Product Options */
+.product-options {
+    margin-bottom: 30px;
+}
+
+.option-group {
+    margin-bottom: 25px;
+}
+
+.option-label {
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.option-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.option-btn {
+    padding: 10px 20px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover,
+.option-btn.active {
+    border-color: rgb(255, 187, 0);
+    background: rgba(255, 187, 0, 0.1);
+    color: #1a1a1a;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quantity-btn:hover {
+    border-color: rgb(255, 187, 0);
+    background: rgba(255, 187, 0, 0.1);
+}
+
+.quantity-input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+/* Action Buttons */
+.product-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.add-to-cart-btn {
+    flex: 1;
+    padding: 16px 32px;
+    background: rgb(255, 187, 0);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Goldman', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #e6a800;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 187, 0, 0.3);
+}
+
+.wishlist-btn {
+    padding: 16px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+    border-color: rgb(255, 187, 0);
+    color: rgb(255, 187, 0);
+}
+
+/* Product Features */
+.product-features-list {
+    background: rgba(255, 187, 0, 0.05);
+    border-left: 4px solid rgb(255, 187, 0);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.product-features-list h4 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.product-features-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-features-list li {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.product-features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: rgb(255, 187, 0);
+    font-weight: bold;
+}
+
+/* Product Tabs */
+.product-tabs {
+    margin-top: 80px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    padding: 15px 0;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-family: 'Goldman', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: -2px;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    color: rgb(255, 187, 0);
+    border-bottom-color: rgb(255, 187, 0);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.spec-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.spec-value {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+}
+
+/* Reviews Section */
+.reviews-section {
+    margin-top: 40px;
+}
+
+.review-summary {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.review-summary h3 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.no-reviews {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .product-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .product-title {
+        font-size: 2rem;
+    }
+    
+    .main-image {
+        height: 400px;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        padding: 0 20px;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .image-thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

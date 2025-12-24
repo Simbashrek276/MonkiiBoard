@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MonkiiBoard 60 - MonkiiBoard</title>
+        <link rel="stylesheet" href="css/styles/body.css">
+        <link rel="stylesheet" href="css/styles/header.css">
+        <link rel="stylesheet" href="css/styles/product.css">
+        <link rel="stylesheet" href="css/styles/footer.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="left-section">
+                <div class="logo-holder">
+                    <a href="main.html">
+                        <img class="logo" src="assets/logo/logo.jpg" alt="MonkiiBoard Logo">
+                        <span class="logo-text"><span class="highlight">Monkii</span>Board</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="middle-section">
+                <div class="menu-buttons-holder">
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='projects.html'">PROJECTS</button>
+                    </div>
+                    <div class="menu-btn-wrapper active">
+                        <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
+                        <div class="nav-dropdown">
+                            <a href="handwiring.html" class="nav-dropdown-item">Handwiring Guide</a>
+                            <a href="insights.html#pcb-guide" class="nav-dropdown-item">PCB Design Guide</a>
+                            <a href="insights.html#switch-reviews" class="nav-dropdown-item">Switch Reviews</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
+                        <div class="nav-dropdown">
+                            <a href="about.html#story" class="nav-dropdown-item">Our Story</a>
+                            <a href="about.html#team" class="nav-dropdown-item">Team</a>
+                            <a href="about.html#mission" class="nav-dropdown-item">Mission</a>
+                            <a href="mailto:hello@monkiiboard.com" class="nav-dropdown-item">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="login-wrapper">
+                    <button class="login-holder">
+                        <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
+                    </button>
+                    <div class="login-dropdown">
+                        <a href="login.html" class="login-dropdown-item">Log In</a>
+                        <a href="signup.html" class="login-dropdown-item">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Page -->
+        <section class="product-page-section">
+            <div class="product-container">
+                <div class="product-layout">
+                    <!-- Product Images -->
+                    <div class="product-images">
+                        <div class="main-image" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');"></div>
+                        <div class="image-thumbnails">
+                            <div class="thumbnail active" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');"></div>
+                            <div class="thumbnail" style="background-image: url('assets/Images/Desktops/japan.jpg');"></div>
+                            <div class="thumbnail" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');"></div>
+                            <div class="thumbnail" style="background-image: url('assets/Images/Desktops/warm yellow.jpg');"></div>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="product-details">
+                        <span class="product-badge">Popular</span>
+                        <h1 class="product-title">MonkiiBoard 60</h1>
+                        
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">No reviews yet</span>
+                        </div>
+
+                        <div class="product-price">$189</div>
+
+                        <p class="product-description">
+                            The MonkiiBoard 60 is our flagship compact mechanical keyboard, featuring a premium 60% layout perfect for minimalists and enthusiasts alike. Built with CNC-machined aluminum, hot-swappable switches, and customizable RGB lighting, this keyboard delivers exceptional performance in a compact form factor.
+                        </p>
+
+                        <!-- Product Options -->
+                        <div class="product-options">
+                            <div class="option-group">
+                                <label class="option-label">Quantity</label>
+                                <div class="quantity-selector">
+                                    <input type="number" class="quantity-input" value="1" readonly style="cursor: not-allowed;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">♥</button>
+                        </div>
+
+                        <!-- Key Features -->
+                        <div class="product-features-list">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Premium CNC aluminum case</li>
+                                <li>Hot-swappable mechanical switches</li>
+                                <li>Per-key RGB lighting</li>
+                                <li>USB-C connectivity</li>
+                                <li>QMK/VIA programmable firmware</li>
+                                <li>Gasket mount design</li>
+                                <li>Double-shot PBT keycaps included</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Tabs -->
+                <div class="product-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="specifications">Specifications</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews (0)</button>
+                    </div>
+
+                    <!-- Specifications Tab -->
+                    <div class="tab-content active" id="specifications">
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Layout</span>
+                                <span class="spec-value">60% (61 keys)</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Mounting Style</span>
+                                <span class="spec-value">Gasket Mount</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Case Material</span>
+                                <span class="spec-value">CNC Aluminum</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Plate Material</span>
+                                <span class="spec-value">FR4 / Aluminum</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">PCB</span>
+                                <span class="spec-value">Hot-swap, RGB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Connectivity</span>
+                                <span class="spec-value">USB-C (Detachable)</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Keycaps</span>
+                                <span class="spec-value">PBT Double-Shot</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Weight</span>
+                                <span class="spec-value">~1.2kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Dimensions</span>
+                                <span class="spec-value">295 x 105 x 32mm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Programming</span>
+                                <span class="spec-value">QMK/VIA Compatible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div class="tab-content" id="reviews">
+                        <div class="reviews-section">
+                            <div class="review-summary">
+                                <h3>Customer Reviews</h3>
+                                <p class="no-reviews">No reviews yet. Be the first to review this product!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand">
+                            <img src="assets/logo/logo.jpg" alt="MonkiiBoard" class="footer-logo">
+                            <span class="footer-brand-name">MonkiiBoard</span>
+                        </div>
+                        <p class="footer-description">
+                            Creating innovative solutions for the modern workspace, especially for your keyboard.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+                            <a href="#" class="footer-social-link" aria-label="GitHub">⚙</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="shop.html">PCB Designs</a></li>
+                            <li><a href="shop.html">Custom Boards</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="insights.html">Technology</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div>
+                        <p class="footer-copyright">© 2025 MonkiiBoard. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Tab switching
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetTab = btn.getAttribute('data-tab');
+                    
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    btn.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+
+            // Image thumbnail switching
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.querySelector('.main-image');
+
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', () => {
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                    
+                    const newImage = thumb.style.backgroundImage;
+                    mainImage.style.backgroundImage = newImage;
+                });
+            });
+
+            // Option buttons
+            document.querySelectorAll('.option-group').forEach(group => {
+                const buttons = group.querySelectorAll('.option-btn');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    });
+                });
+            });
+
+            // Quantity selector
+            const quantityInput = document.querySelector('.quantity-input');
+            const quantityBtns = document.querySelectorAll('.quantity-btn');
+
+            quantityBtns[0].addEventListener('click', () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+            });
+
+            quantityBtns[1].addEventListener('click', () => {
+                quantityInput.value = parseInt(quantityInput.value) + 1;
+            });
+        </script>
+    </body>
+</html>

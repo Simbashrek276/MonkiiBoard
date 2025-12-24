@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 
-/* Shop Hero Section */
-.shop-hero-section {
+/* Projects Hero Section */
+.projects-hero-section {
     background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
     padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
 }
 
-.shop-hero-section::before {
+.projects-hero-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -21,7 +21,7 @@
     pointer-events: none;
 }
 
-.shop-hero-content {
+.projects-hero-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
@@ -30,7 +30,7 @@
     z-index: 1;
 }
 
-.shop-hero-tagline {
+.projects-hero-tagline {
     font-family: 'Goldman', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
@@ -40,7 +40,7 @@
     margin-bottom: 20px;
 }
 
-.shop-hero-title {
+.projects-hero-title {
     font-family: 'Goldman', sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
@@ -51,11 +51,11 @@
     letter-spacing: 2px;
 }
 
-.shop-hero-title .highlight {
+.projects-hero-title .highlight {
     color: rgb(255, 187, 0);
 }
 
-.shop-hero-description {
+.projects-hero-description {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     color: #cccccc;
@@ -65,19 +65,29 @@
     line-height: 1.6;
 }
 
-/* Products Grid Section */
-.products-grid-section {
+/* Projects Grid Section */
+.projects-grid-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     padding: 60px 0 80px;
 }
 
-.products-grid {
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.product-card {
+.project-card:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+.project-card:nth-child(4) {
+    grid-column: 1 / -1;
+}
+
+.project-card {
     background: white;
     border-radius: 16px;
     overflow: hidden;
@@ -87,20 +97,24 @@
     position: relative;
 }
 
-.product-card:hover {
+.project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 40px rgba(200, 200, 200, 0.5);
     background: rgb(240, 240, 240) !important;
 }
 
-.product-image {
+.project-card.coming-soon {
+    opacity: 0.75;
+}
+
+.project-image {
     height: 240px;
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
-.product-tag {
+.project-tag {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -113,31 +127,26 @@
     letter-spacing: 0.5px;
 }
 
-.product-tag.popular {
+.project-tag.popular {
     background: rgb(255, 187, 0);
     color: #000;
 }
 
-.product-tag.new {
+.project-tag.new {
     background: #28a745;
     color: white;
 }
 
-.product-tag.bestseller {
-    background: #dc3545;
-    color: white;
-}
-
-.product-tag.limited {
+.project-tag.coming {
     background: #6f42c1;
     color: white;
 }
 
-.product-info {
+.project-info {
     padding: 24px;
 }
 
-.product-info h3 {
+.project-info h3 {
     font-family: 'Goldman', sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
@@ -145,7 +154,7 @@
     margin-bottom: 12px;
 }
 
-.product-description {
+.project-description {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     color: #5f5f5f;
@@ -153,7 +162,7 @@
     margin-bottom: 16px;
 }
 
-.product-features {
+.project-features {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -170,21 +179,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.product-pricing {
+.project-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
 }
 
-.product-price {
-    font-family: 'Goldman', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: rgb(255, 187, 0);
-}
-
-.product-btn {
+.project-btn {
+    width: 100%;
     padding: 10px 20px;
     font-size: 0.8rem;
     font-weight: 550;
@@ -204,7 +206,7 @@
     white-space: nowrap;
 }
 
-.product-btn::before {
+.project-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -216,15 +218,29 @@
     z-index: -1;
 }
 
-.product-btn:hover::before {
+.project-btn:hover::before {
     left: 0;
 }
 
-.product-btn:hover {
+.project-btn:hover {
     color: #ffffff;
     border-color: #1a1a1a;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.project-btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.project-btn:disabled::before {
+    display: none;
 }
 
 /* Active menu indicator */
@@ -234,54 +250,60 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card:nth-child(1),
+    .project-card:nth-child(4) {
+        grid-column: auto;
+    }
+}
+
 @media (max-width: 768px) {
-    .shop-hero-section {
+    .projects-hero-section {
         padding: 100px 0 60px;
     }
     
-    .shop-hero-content {
+    .projects-hero-content {
         padding: 0 20px;
     }
     
-    .shop-hero-title {
+    .projects-hero-title {
         font-size: 2.5rem;
     }
     
-    .shop-hero-description {
+    .projects-hero-description {
         font-size: 1rem;
     }
     
-    .products-grid {
+    .projects-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+        padding: 0 20px;
     }
     
-    .product-card {
-        margin: 0 10px;
+    .project-card {
+        margin: 0;
     }
     
-    .product-pricing {
-        flex-direction: column;
-        gap: 12px;
-        align-items: stretch;
-    }
-    
-    .product-btn {
-        width: 100%;
-        text-align: center;
+    .project-card:nth-child(1),
+    .project-card:nth-child(4) {
+        grid-column: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .shop-hero-title {
+    .projects-hero-title {
         font-size: 2rem;
     }
     
-    .product-info {
+    .project-info {
         padding: 20px;
     }
     
-    .product-image {
+    .project-image {
         height: 200px;
     }
 }

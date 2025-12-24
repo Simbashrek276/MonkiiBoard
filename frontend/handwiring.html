@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Handwiring Guide - MonkiiBoard</title>
+        <link rel="stylesheet" href="css/styles/body.css">
+        <link rel="stylesheet" href="css/styles/header.css">
+        <link rel="stylesheet" href="css/styles/handwiring.css">
+        <link rel="stylesheet" href="css/styles/footer.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="left-section">
+                <div class="logo-holder">
+                    <a href="main.html">
+                        <img class="logo" src="assets/logo/logo.jpg" alt="MonkiiBoard Logo">
+                        <span class="logo-text"><span class="highlight">Monkii</span>Board</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="middle-section">
+                <div class="menu-buttons-holder">
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='projects.html'">PROJECTS</button>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
+                    </div>
+                    <div class="menu-btn-wrapper active">
+                        <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
+                        <div class="nav-dropdown">
+                            <a href="handwiring.html" class="nav-dropdown-item">Handwiring Guide</a>
+                            <a href="insights.html#pcb-guide" class="nav-dropdown-item">PCB Design Guide</a>
+                            <a href="insights.html#switch-reviews" class="nav-dropdown-item">Switch Reviews</a>
+                        </div>
+                    </div>
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='about.html'">ABOUT</button>
+                        <div class="nav-dropdown">
+                            <a href="about.html" class="nav-dropdown-item">Our Story</a>
+                            <a href="about.html" class="nav-dropdown-item">Team</a>
+                            <a href="about.html" class="nav-dropdown-item">Mission</a>
+                            <a href="mailto:hello@monkiiboard.com" class="nav-dropdown-item">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="login-wrapper">
+                    <button class="login-holder">
+                        <img class="login" src="assets/Images/UI/white user outline.jpg" alt="Login">
+                    </button>
+                    <div class="login-dropdown">
+                        <a href="login.html" class="login-dropdown-item">Log In</a>
+                        <a href="signup.html" class="login-dropdown-item">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="handwiring-hero-section">
+            <div class="handwiring-hero-content">
+                <div class="handwiring-hero-tagline">TECHNICAL GUIDE</div>
+                <h1 class="handwiring-hero-title">
+                    <span class="highlight">Handwiring</span><br>Guide
+                </h1>
+                <p class="handwiring-hero-description">
+                    Master the art of building custom keyboards from scratch without PCBs
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Guide Section -->
+        <section class="guide-section">
+            <div class="container">
+                <div class="guide-intro">
+                    <p>Handwiring is the traditional method of building custom mechanical keyboards without PCBs. This technique gives you complete control over your keyboard's layout, switch choices, and functionality while teaching you the fundamentals of keyboard electronics.</p>
+                </div>
+
+                <div class="guide-steps">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h3>Tools & Materials</h3>
+                        <ul>
+                            <li>Soldering iron (temperature controlled, 60W recommended)</li>
+                            <li>Solder (60/40 or 63/37 tin/lead or lead-free)</li>
+                            <li>Wire (22-26 AWG solid core for columns, stranded for rows)</li>
+                            <li>Diodes (1N4148 through-hole diodes)</li>
+                            <li>Microcontroller (Pro Micro, Elite-C, or similar)</li>
+                            <li>Wire strippers and cutters</li>
+                            <li>Multimeter for testing continuity</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h3>Understanding the Matrix</h3>
+                        <p>A keyboard matrix connects switches in rows and columns to reduce the number of microcontroller pins needed. Each key sits at the intersection of a row and column wire, with a diode preventing ghosting.</p>
+                        <div class="info-box">
+                            <strong>Key Principle:</strong> For an N-key keyboard, you need √N rows × √N columns instead of N pins.
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h3>Planning Your Layout</h3>
+                        <ul>
+                            <li>Design your keyboard layout using keyboard-layout-editor.com</li>
+                            <li>Calculate the matrix dimensions (rows × columns)</li>
+                            <li>Map out which switches connect to which pins</li>
+                            <li>Draw a wiring diagram before starting</li>
+                            <li>Test fit all switches in your case/plate</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <h3>Wiring the Columns</h3>
+                        <p>Start by wiring all columns using solid core wire:</p>
+                        <ul>
+                            <li>Strip and tin the wire ends</li>
+                            <li>Solder wire to the top pin of each switch in a column</li>
+                            <li>Keep wire runs straight and taut</li>
+                            <li>Use helping hands or tape to hold wires in place</li>
+                            <li>Test continuity after each column</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">05</div>
+                        <h3>Adding Diodes</h3>
+                        <p>Solder a diode to each switch before wiring rows:</p>
+                        <ul>
+                            <li>Bend diode legs to fit between switch pins</li>
+                            <li>Black band (cathode) faces the column wire</li>
+                            <li>Solder one leg to the bottom switch pin</li>
+                            <li>Leave the other leg extended for row wiring</li>
+                            <li>Trim excess diode legs after soldering</li>
+                        </ul>
+                        <div class="warning-box">
+                            <strong>Important:</strong> Diode orientation is critical! All diodes in a row must face the same direction.
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">06</div>
+                        <h3>Wiring the Rows</h3>
+                        <p>Connect all diodes in each row:</p>
+                        <ul>
+                            <li>Use stranded wire for easier routing</li>
+                            <li>Strip small sections of insulation at each diode</li>
+                            <li>Solder wire to the extended diode legs</li>
+                            <li>Route wires neatly beneath columns</li>
+                            <li>Test each row for continuity</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">07</div>
+                        <h3>Connecting the Microcontroller</h3>
+                        <ul>
+                            <li>Plan pin assignments before wiring</li>
+                            <li>Solder row wires to designated row pins</li>
+                            <li>Solder column wires to designated column pins</li>
+                            <li>Keep wire runs organized and labeled</li>
+                            <li>Add strain relief with hot glue if needed</li>
+                            <li>Double-check all connections with multimeter</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">08</div>
+                        <h3>Firmware & Testing</h3>
+                        <p>Flash and test your keyboard:</p>
+                        <ul>
+                            <li>Configure QMK firmware with your matrix layout</li>
+                            <li>Define row and column pins in config.h</li>
+                            <li>Create your keymap</li>
+                            <li>Flash firmware to microcontroller</li>
+                            <li>Test each key using keyboard testing software</li>
+                            <li>Debug any non-working keys (check solder joints)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h3>Pro Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4>Clean Soldering</h4>
+                            <p>Use flux and keep your iron tip clean. Good solder joints are shiny and smooth, not dull or blobby.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>Test As You Go</h4>
+                            <p>Test continuity after completing each row and column. It's easier to fix issues early than to debug later.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>Color Coding</h4>
+                            <p>Use different colored wires for rows and columns. This makes troubleshooting much easier.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>Documentation</h4>
+                            <p>Take photos during the build and keep your wiring diagram. Future you will thank present you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand">
+                            <img src="assets/logo/logo.jpg" alt="MonkiiBoard" class="footer-logo">
+                            <span class="footer-brand-name">MonkiiBoard</span>
+                        </div>
+                        <p class="footer-description">
+                            Creating innovative solutions for the modern workspace, especially for your keyboard.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+                            <a href="#" class="footer-social-link" aria-label="GitHub">⚙</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="shop.html">PCB Designs</a></li>
+                            <li><a href="shop.html">Custom Boards</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="insights.html">Technology</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div>
+                        <p class="footer-copyright">© 2025 MonkiiBoard. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

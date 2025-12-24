@@ -25,31 +25,18 @@
 
             <div class="middle-section">
                 <div class="menu-buttons-holder">
+                    <div class="menu-btn-wrapper">
+                        <button class="menu-btn" onclick="location.href='projects.html'">PROJECTS</button>
+                    </div>
                     <div class="menu-btn-wrapper active">
                         <button class="menu-btn" onclick="location.href='shop.html'">OUR SHOP</button>
-                        <div class="nav-dropdown">
-                            <a href="shop.html" class="nav-dropdown-item">All Products</a>
-                            <a href="shop.html" class="nav-dropdown-item">Keyboards</a>
-                            <a href="shop.html" class="nav-dropdown-item">Desk Mats</a>
-                            <a href="shop.html" class="nav-dropdown-item">PCBs & Components</a>
-                            <a href="shop.html" class="nav-dropdown-item">Accessories</a>
-                        </div>
-                    </div>
-                    <div class="menu-btn-wrapper">
-                        <button class="menu-btn" onclick="location.href='setups.html'">SETUPS</button>
-                        <div class="nav-dropdown">
-                            <a href="setups.html" class="nav-dropdown-item">Featured Setups</a>
-                            <a href="setups.html" class="nav-dropdown-item">Minimal Builds</a>
-                            <a href="setups.html" class="nav-dropdown-item">Gaming Stations</a>
-                            <a href="setups.html" class="nav-dropdown-item">Submit Your Setup</a>
-                        </div>
                     </div>
                     <div class="menu-btn-wrapper">
                         <button class="menu-btn" onclick="location.href='insights.html'">INSIGHTS</button>
                         <div class="nav-dropdown">
-                            <a href="insights.html" class="nav-dropdown-item">PCB Design Guide</a>
-                            <a href="insights.html" class="nav-dropdown-item">Switch Reviews</a>
-                            <a href="insights.html" class="nav-dropdown-item">Build Tutorials</a>
+                            <a href="handwiring.html" class="nav-dropdown-item">Handwiring Guide</a>
+                            <a href="insights.html#pcb-guide" class="nav-dropdown-item">PCB Design Guide</a>
+                            <a href="insights.html#switch-reviews" class="nav-dropdown-item">Switch Reviews</a>
                         </div>
                     </div>
                     <div class="menu-btn-wrapper">
@@ -90,96 +77,89 @@
             </div>
         </section>
 
-        <!-- Filter Section -->
-        <section class="filter-section">
-            <div class="container">
-                <div class="filter-header">
-                    <h2>Browse Products</h2>
-                    <div class="filter-controls">
-                        <div class="filter-dropdown">
-                            <select id="category-filter">
-                                <option value="all">All Categories</option>
-                                <option value="keyboards">Keyboards</option>
-                                <option value="pcbs">PCBs & Components</option>
-                                <option value="accessories">Accessories</option>
-                            </select>
-                        </div>
-                        <div class="filter-dropdown">
-                            <select id="price-filter">
-                                <option value="all">All Prices</option>
-                                <option value="0-50">Under $50</option>
-                                <option value="50-100">$50 - $100</option>
-                                <option value="100-200">$100 - $200</option>
-                                <option value="200+">$200+</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Products Grid Section -->
         <section class="products-grid-section">
             <div class="container">
                 <div class="products-grid">
-                    <!-- Keyboards Category -->
+                    <!-- 60% Keyboard -->
                     <div class="product-card" data-category="keyboards" data-price="189">
                         <div class="product-image" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');">
                             <span class="product-tag popular">Popular</span>
                         </div>
                         <div class="product-info">
-                            <h3>MonkiiBoard 75</h3>
-                            <p class="product-description">Premium 75% mechanical keyboard with hot-swappable switches and aluminum construction.</p>
+                            <h3>MonkiiBoard 60</h3>
+                            <p class="product-description">Compact 60% mechanical keyboard with hot-swappable switches and aluminum construction.</p>
                             <div class="product-features">
-                                <span class="feature-tag">75% Layout</span>
+                                <span class="feature-tag">60% Layout</span>
                                 <span class="feature-tag">Hot-Swap</span>
                                 <span class="feature-tag">RGB</span>
                             </div>
                             <div class="product-pricing">
                                 <span class="product-price">$189</span>
-                                <button class="product-btn">Add to Cart</button>
+                                <button class="product-btn" onclick="location.href='product-monkiiboard60.html'">View Details</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="product-card" data-category="keyboards" data-price="159">
+                    <!-- Macropad -->
+                    <div class="product-card" data-category="accessories" data-price="49">
                         <div class="product-image" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');">
                             <span class="product-tag new">New</span>
                         </div>
                         <div class="product-info">
-                            <h3>MonkiiBoard 65</h3>
-                            <p class="product-description">Compact 65% keyboard perfect for minimal setups with premium build quality.</p>
+                            <h3>MonkiiPad Macro</h3>
+                            <p class="product-description">12-key programmable macropad perfect for productivity and creative workflows.</p>
                             <div class="product-features">
-                                <span class="feature-tag">65% Layout</span>
-                                <span class="feature-tag">Aluminum</span>
-                                <span class="feature-tag">Gasket Mount</span>
+                                <span class="feature-tag">12 Keys</span>
+                                <span class="feature-tag">Programmable</span>
+                                <span class="feature-tag">RGB</span>
                             </div>
                             <div class="product-pricing">
-                                <span class="product-price">$159</span>
-                                <button class="product-btn">Add to Cart</button>
+                                <span class="product-price">$49</span>
+                                <button class="product-btn" onclick="location.href='product-macropad.html'">View Details</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="product-card" data-category="keyboards" data-price="219">
+                    <!-- Switch Pack -->
+                    <div class="product-card" data-category="pcbs" data-price="35">
                         <div class="product-image" style="background-image: url('assets/Images/Desktops/japan.jpg');">
                         </div>
                         <div class="product-info">
-                            <h3>MonkiiBoard TKL</h3>
-                            <p class="product-description">Tenkeyless keyboard with premium switches and customizable RGB lighting.</p>
+                            <h3>Switch Pack - Linear</h3>
+                            <p class="product-description">Premium linear switches (90 pack) for smooth typing experience.</p>
                             <div class="product-features">
-                                <span class="feature-tag">TKL Layout</span>
-                                <span class="feature-tag">Premium Switches</span>
-                                <span class="feature-tag">Custom RGB</span>
+                                <span class="feature-tag">90 Switches</span>
+                                <span class="feature-tag">Linear</span>
+                                <span class="feature-tag">Lubed</span>
                             </div>
                             <div class="product-pricing">
-                                <span class="product-price">$219</span>
-                                <button class="product-btn">Add to Cart</button>
+                                <span class="product-price">$35</span>
+                                <button class="product-btn" onclick="location.href='product-switches.html'">View Details</button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- PCBs & Components -->
+                    <!-- Keycaps -->
+                    <div class="product-card" data-category="pcbs" data-price="65">
+                        <div class="product-image" style="background-image: url('assets/Images/Desktops/warm yellow.jpg');">
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Keycap Set</h3>
+                            <p class="product-description">Double-shot PBT keycaps with premium legends and multiple colorways.</p>
+                            <div class="product-features">
+                                <span class="feature-tag">PBT Material</span>
+                                <span class="feature-tag">Double-Shot</span>
+                                <span class="feature-tag">Cherry Profile</span>
+                            </div>
+                            <div class="product-pricing">
+                                <span class="product-price">$65</span>
+                                <button class="product-btn" onclick="location.href='product-keycaps.html'">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PCB Design -->
                     <div class="product-card" data-category="pcbs" data-price="49">
                         <div class="product-image" style="background-image: url('assets/Images/PCBs/Keeb60.png');">
                             <span class="product-tag bestseller">Best Seller</span>
@@ -194,66 +174,12 @@
                             </div>
                             <div class="product-pricing">
                                 <span class="product-price">$49</span>
-                                <button class="product-btn">Add to Cart</button>
+                                <button class="product-btn" onclick="location.href='product-pcb.html'">View Details</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="product-card" data-category="pcbs" data-price="25">
-                        <div class="product-image" style="background-image: url('assets/Images/PCBs/Raspberry\ Pi_Rescaled.jpg');">
-                        </div>
-                        <div class="product-info">
-                            <h3>Wireless Module</h3>
-                            <p class="product-description">Bluetooth 5.0 wireless module for custom keyboard builds.</p>
-                            <div class="product-features">
-                                <span class="feature-tag">Bluetooth 5.0</span>
-                                <span class="feature-tag">Low Power</span>
-                                <span class="feature-tag">Easy Install</span>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="product-price">$25</span>
-                                <button class="product-btn">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-category="pcbs" data-price="35">
-                        <div class="product-image" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');">
-                        </div>
-                        <div class="product-info">
-                            <h3>Switch Pack - Linear</h3>
-                            <p class="product-description">Premium linear switches (90 pack) for smooth typing experience.</p>
-                            <div class="product-features">
-                                <span class="feature-tag">90 Switches</span>
-                                <span class="feature-tag">Linear</span>
-                                <span class="feature-tag">Lubed</span>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="product-price">$35</span>
-                                <button class="product-btn">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-category="pcbs" data-price="65">
-                        <div class="product-image" style="background-image: url('assets/Images/Desktops/warm yellow.jpg');">
-                        </div>
-                        <div class="product-info">
-                            <h3>Premium Keycap Set</h3>
-                            <p class="product-description">Double-shot PBT keycaps with premium legends and multiple colorways.</p>
-                            <div class="product-features">
-                                <span class="feature-tag">PBT Material</span>
-                                <span class="feature-tag">Double-Shot</span>
-                                <span class="feature-tag">Cherry Profile</span>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="product-price">$65</span>
-                                <button class="product-btn">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accessories -->
+                    <!-- Desk Mat -->
                     <div class="product-card" data-category="accessories" data-price="29">
                         <div class="product-image" style="background-image: url('assets/Images/Mousepads/waves_Rescaled.png');">
                         </div>
@@ -267,62 +193,7 @@
                             </div>
                             <div class="product-pricing">
                                 <span class="product-price">$29</span>
-                                <button class="product-btn">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-category="accessories" data-price="19">
-                        <div class="product-image" style="background-image: url('assets/Images/Desktops/greeny_Rescaled.jpg');">
-                        </div>
-                        <div class="product-info">
-                            <h3>Custom Cable Kit</h3>
-                            <p class="product-description">Braided USB-C cable with aviator connector and multiple color options.</p>
-                            <div class="product-features">
-                                <span class="feature-tag">USB-C</span>
-                                <span class="feature-tag">Aviator Connector</span>
-                                <span class="feature-tag">Braided</span>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="product-price">$19</span>
-                                <button class="product-btn">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-category="accessories" data-price="129">
-                        <div class="product-image" style="background-image: url('assets/Images/Desktops/japan.jpg');">
-                            <span class="product-tag limited">Limited</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Complete Build Kit</h3>
-                            <p class="product-description">Everything you need to build your first mechanical keyboard from scratch.</p>
-                            <div class="product-features">
-                                <span class="feature-tag">Complete Kit</span>
-                                <span class="feature-tag">Tools Included</span>
-                                <span class="feature-tag">Guide Book</span>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="product-price">$129</span>
-                                <button class="product-btn">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-category="accessories" data-price="15">
-                        <div class="product-image" style="background-image: url('assets/Images/Desktops/warm\ black_Rescaled.jpg');">
-                        </div>
-                        <div class="product-info">
-                            <h3>Switch Puller Tool</h3>
-                            <p class="product-description">Professional-grade switch puller for hot-swappable keyboards.</p>
-                            <div class="product-features">
-                                <span class="feature-tag">Professional Grade</span>
-                                <span class="feature-tag">Ergonomic</span>
-                                <span class="feature-tag">Durable</span>
-                            </div>
-                            <div class="product-pricing">
-                                <span class="product-price">$15</span>
-                                <button class="product-btn">Add to Cart</button>
+                                <button class="product-btn" onclick="location.href='product-deskmat.html'">View Details</button>
                             </div>
                         </div>
                     </div>
@@ -356,8 +227,6 @@
                         <ul>
                             <li><a href="shop.html">PCB Designs</a></li>
                             <li><a href="shop.html">Custom Boards</a></li>
-                            <li><a href="shop.html">Accessories</a></li>
-                            <li><a href="shop.html">Components</a></li>
                         </ul>
                     </div>
 
@@ -367,19 +236,6 @@
                         <ul>
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="insights.html">Technology</a></li>
-                            <li><a href="setups.html">Portfolio</a></li>
-                            <li><a href="mailto:hello@monkiiboard.com">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Support -->
-                    <div class="footer-section">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Design Guide</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -388,11 +244,6 @@
                 <div class="footer-bottom">
                     <div>
                         <p class="footer-copyright">© 2025 MonkiiBoard. All rights reserved.</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookies</a>
                     </div>
                 </div>
             </div>
