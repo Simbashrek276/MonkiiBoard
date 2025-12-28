@@ -4,7 +4,7 @@
     width: 100%;
     min-height: calc(100vh - 60px);
     margin-top: 60px;
-    overflow: visible;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -341,4 +341,21 @@
 @keyframes contrastPulse {
     0%, 100% { --pulse: 0.2; }
     50% { --pulse: 0.6; }
+}
+
+/* Hero Images */
+.hero-images {
+    position: absolute;
+    right: 5%;
+    bottom: -30%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-image {
+    width: 800px;
+    height: auto;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    transform: scaleX(1);
 }

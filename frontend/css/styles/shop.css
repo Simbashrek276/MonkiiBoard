@@ -65,6 +65,18 @@
     line-height: 1.6;
 }
 
+.shop-note {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: rgb(255, 187, 0);
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(255, 187, 0, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+}
+
 /* Products Grid Section */
 .products-grid-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -225,6 +237,27 @@
     border-color: #1a1a1a;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Detail Page Styles */
+.product-availability-notice {
+    background: rgba(255, 187, 0, 0.1);
+    border-left: 4px solid rgb(255, 187, 0);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.product-availability-notice p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: #b8860b;
+    font-weight: 500;
+    margin: 0;
+}
+
+.product-availability-notice strong {
+    color: rgb(255, 187, 0);
 }
 
 /* Active menu indicator */

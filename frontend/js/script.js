@@ -43,3 +43,16 @@ function setupDropdowns() {
         }
     });
 }
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Add to Cart notification for unavailable products
+function addToCart(productName) {
+    alert('⚠️ Product Currently Unavailable\n\n"' + productName + '" cannot be added to cart at this time.\n\nOnline purchasing will be available soon. Thank you for your patience!');
+}
