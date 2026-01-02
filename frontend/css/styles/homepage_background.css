@@ -346,14 +346,14 @@
 /* Hero Images */
 .hero-images {
     position: absolute;
-    right: 5%;
-    bottom: -30%;
-    z-index: 2;
+    right: 100px;
+    bottom: -80px;
+    z-index: 1;
     pointer-events: none;
 }
 
 .hero-image {
-    width: 800px;
+    max-width: 100%;
     height: auto;
     opacity: 0.9;
     transition: all 0.3s ease;
