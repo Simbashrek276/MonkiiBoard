@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/styles/featured-products.css">
         <link rel="stylesheet" href="css/styles/products.css">
         <link rel="stylesheet" href="css/styles/footer.css">
+        <link rel="stylesheet" href="css/styles/animations.css">
         <script src="js/script.js"></script>
     </head>
     <body>
@@ -48,7 +49,6 @@
                             <a href="about.html" class="nav-dropdown-item">Our Story</a>
                             <a href="about.html" class="nav-dropdown-item">Team</a>
                             <a href="about.html" class="nav-dropdown-item">Mission</a>
-                            <a href="mailto:hello@monkiiboard.com" class="nav-dropdown-item">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -96,20 +96,20 @@
                 </div>
             </div>
             <div class="hero-images">
-                <img src="assets/Images/Keyboards/macropad.png" alt="Switch Matrix" class="hero-image">
+                <img src="assets/Images/PCBs/background.png" alt="Switch Matrix" class="hero-image">
             </div>
         </section>
 
         <!-- Small Shop Grid Section -->
         <section class="shop-grid-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header fade-in-up">
                     <h2 class="section-title">Shop</h2>
                     <p class="section-subtitle">Grab your favorites or explore something new</p>
                 </div>
                 
                 <div class="shop-grid">
-                    <div class="shop-item featured-item">
+                    <div class="shop-item featured-item fade-in-up stagger-1">
                         <div class="shop-image" style="background-image: url('assets/Images/Keyboards/matrix1.jpg');">
                             <div class="shop-overlay">
                                 <h3>MonkiiBoard 31</h3>
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     
-                    <div class="shop-item">
+                    <div class="shop-item fade-in-up stagger-2">
                         <div class="shop-image" style="background-image: url('assets/Images/PCBs/Keeb60.png');">
                             <div class="shop-overlay">
                                 <h3>Custom PCB</h3>
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                     
-                    <div class="shop-item">
+                    <div class="shop-item fade-in-up stagger-3">
                         <div class="shop-image" style="background-image: url('assets/Images/Mousepads/waves_Rescaled.png');">
                             <div class="shop-overlay">
                                 <h3>Desk Mat XL</h3>
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     
-                    <div class="shop-item">
+                    <div class="shop-item fade-in-up stagger-4">
                         <div class="shop-image" style="background-image: url('assets/Images/Keyboards/switch1.jpg');">
                             <div class="shop-overlay">
                                 <h3>Switch Pack of 50</h3>
@@ -150,41 +150,90 @@
                         </div>
                     </div>
                     
-                    <div class="shop-item">
-                        <div class="shop-image" style="background-image: url('assets/Images/Desktops/japan.jpg');">
-                            <div class="shop-overlay">
-                                <h3>Build Kit</h3>
-                                <p class="shop-price">$129</p>
-                                <button class="shop-btn" onclick="location.href='shop.html'">View</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="shop-item">
-                        <div class="shop-image" style="background-image: url('assets/Images/Desktops/warm yellow.jpg');">
-                            <div class="shop-overlay">
-                                <h3>Keycap Set</h3>
-                                <p class="shop-price">$65</p>
-                                <button class="shop-btn" onclick="location.href='shop.html'">View</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="shop-item">
-                        <div class="shop-image" style="background-image: url('assets/Images/PCBs/Raspberry\ Pi_Rescaled.jpg');">
-                            <div class="shop-overlay">
-                                <h3>Wireless Module</h3>
-                                <p class="shop-price">$25</p>
-                                <button class="shop-btn" onclick="location.href='shop.html'">View</button>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
                 
-                <div class="shop-cta">
+                <div class="shop-cta fade-in-up">
                     <button class="shop-btn-main" onclick="location.href='shop.html'">
                         Browse All Products
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About the Startup Section -->
+        <section class="startup-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-label">OUR MISSION</span>
+                    <h2 class="section-title">Building the Future, One at a Time</h2>
+                    <p class="section-subtitle">A non-profit startup empowering the next generation of engineers and designers</p>
+                </div>
+
+                <div class="startup-video-container fade-in-up">
+                    <video class="startup-video" autoplay loop muted playsinline>
+                        <source src="assets/Video/schematic.mkv" type="video/mp4">
+                    </video>
+                    <div class="startup-video-overlay">
+                        <h3>Hands-On Learning</h3>
+                        <p>Students designing and building their first keyboards</p>
+                    </div>
+                </div>
+
+                <div class="startup-description-box fade-in-up">
+                    <p>
+                        MonkiiBoard is a <strong>non-profit startup</strong> dedicated to making quality mechanical keyboards accessible to everyone. 
+                        We're more than just a company – we're a learning community empowering the next generation of engineers and designers.
+                    </p>
+                </div>
+
+                <div class="startup-approach fade-in-up">
+                    <h3>Our Approach</h3>
+                    <p>
+                        By leveraging innovative manufacturing techniques like <strong>3D printing with PLA/PETG</strong> and optimizing 
+                        PCB design, we dramatically reduce production costs without sacrificing quality. This allows us to create 
+                        <strong>durable and affordable tech for everyone</strong>.
+                    </p>
+                </div>
+
+                <div class="startup-highlights-grid">
+                    <div class="highlight-item fade-in-up stagger-1">
+                        <span class="highlight-number" data-target="100">0</span>
+                        <span class="highlight-percent">%</span>
+                        <span class="highlight-label">Non-Profit</span>
+                    </div>
+                    <div class="highlight-item fade-in-up stagger-2">
+                        <span class="highlight-number" data-target="70">0</span>
+                        <span class="highlight-percent">%</span>
+                        <span class="highlight-label">Cost Reduction</span>
+                    </div>
+                    <div class="highlight-item fade-in-up stagger-3">
+                        <span class="highlight-number" data-target="3">0</span>
+                        <span class="highlight-plus">+</span>
+                        <span class="highlight-label">Age Groups</span>
+                    </div>
+                </div>
+
+                <div class="startup-audience">
+                    <div class="audience-card fade-in-up stagger-1">
+                        <div class="audience-icon">📚</div>
+                        <h4>For High Schoolers</h4>
+                        <p>Sign up to create PCB design and hardware engineering through hands-on projects with us</p>
+                    </div>
+                    <div class="audience-card fade-in-up stagger-2">
+                        <div class="audience-icon">💡</div>
+                        <h4>For College Students</h4>
+                        <p>Join to help highschoolers with ECE projects and mentorship through tips and experiences</p>
+                    </div>
+                    <div class="audience-card fade-in-up stagger-3">
+                        <div class="audience-icon">🚀</div>
+                        <h4>For Industry Pros</h4>
+                        <p>Share your expertise through mentorship, talks, and advisory meetings in the hardware space</p>
+                    </div>
+                </div>
+
+                <div class="startup-cta fade-in-up">
+                    <button class="startup-btn" onclick="window.open('https://forms.gle/JPd1u5SrboAcBPis5', '_blank')">
+                        Join Us Now!
                     </button>
                 </div>
             </div>
@@ -193,12 +242,12 @@
         <!-- Professional Product Overview Section -->
         <section class="product-overview-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header fade-in-up">
                     <h2 class="section-title">"So what's special?"</h2>
                 </div>
                 
                 <div class="product-grid">
-                    <div class="product-category">
+                    <div class="product-category fade-in-up stagger-1">
                         <div class="category-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <rect x="2" y="6" width="20" height="12" rx="2"/>
@@ -216,7 +265,7 @@
                         </div>
                     </div>
 
-                    <div class="product-category">
+                    <div class="product-category fade-in-up stagger-2">
                         <div class="category-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -233,15 +282,15 @@
                         </div>
                     </div>
 
-                    <div class="product-category">
+                    <div class="product-category fade-in-up stagger-3">
                         <div class="category-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <rect x="3" y="3" width="18" height="18" rx="2"/>
                                 <path d="M9 9h6v6H9z"/>
                             </svg>
                         </div>
-                        <h3>Workspace Solutions</h3>
-                        <p>Professional desk mats and accessories designed to enhance productivity and complement modern workspaces.</p>
+                        <h3>Curated Materials</h3>
+                        <p>Configuring and sourcing high quality PLA Filament and PETG filament based on necessitated demands and the market.</p>
                         <div class="category-features">
                             <span class="feature-tag">Premium Materials</span>
                             <span class="feature-tag">Water Resistant</span>
@@ -255,13 +304,13 @@
         <!-- Behind the Scenes Section -->
         <section class="behind-scenes-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header fade-in-up">
                     <h2 class="section-title">Behind the Scenes</h2>
                     <p class="section-subtitle">A peek into our workshop and the passion that drives every build</p>
                 </div>
                 
                 <div class="showcase-grid">
-                    <div class="showcase-item large-item">
+                    <div class="showcase-item large-item fade-in-up stagger-1">
                         <div class="showcase-image">
                             <video class="showcase-video" autoplay loop muted playsinline>
                                 <source src="assets/Video/customer_keyboard_test.mp4" type="video/mp4">
@@ -274,7 +323,7 @@
                         </div>
                     </div>
                     
-                    <div class="showcase-item">
+                    <div class="showcase-item fade-in-up stagger-2">
                         <div class="showcase-image" style="background-image: url('assets/Images/PCBs/pcb3.jpg');">
                             <div class="showcase-overlay">
                                 <h3>PCB Design</h3>
@@ -283,7 +332,7 @@
                         </div>
                     </div>
                     
-                    <div class="showcase-item">
+                    <div class="showcase-item fade-in-up stagger-3">
                         <div class="showcase-image" style="background-image: url('assets/Images/Keyboards/handwiring1.jpg');">
                             <div class="showcase-overlay">
                                 <h3>Hand Wiring</h3>
@@ -292,7 +341,7 @@
                         </div>
                     </div>
                     
-                    <div class="showcase-item">
+                    <div class="showcase-item fade-in-up stagger-4">
                         <div class="showcase-image" style="background-image: url('assets/Images/Keyboards/handwiring2.jpg');">
                             <div class="showcase-overlay">
                                 <h3>Switch Matrix</h3>
@@ -301,7 +350,7 @@
                         </div>
                     </div>
                     
-                    <div class="showcase-item">
+                    <div class="showcase-item fade-in-up stagger-5">
                         <div class="showcase-image">
                             <video class="showcase-video" autoplay loop muted playsinline>
                                 <source src="assets/Video/MonkiiBoard_MacroBoard_1_Test.mp4" type="video/mp4">
@@ -312,6 +361,91 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-container">
+                    <details class="faq-item fade-in-up stagger-1">
+                        <summary>What makes MonkiiBoard keyboards different?</summary>
+                        <p>Our keyboards are handcrafted with premium components, custom PCB designs, and meticulous attention to detail. Each build is optimized for performance, durability, and the perfect typing experience.</p>
+                    </details>
+
+                    <details class="faq-item fade-in-up stagger-2">
+                        <summary>Do you offer custom keyboard builds?</summary>
+                        <p>Yes! We specialize in custom builds tailored to your exact specifications. Choose your layout, switches, keycaps, and case design. Contact us to start your custom project.</p>
+                    </details>
+
+                    <details class="faq-item fade-in-up stagger-3">
+                        <summary>What is the typical build time?</summary>
+                        <p>Standard builds typically take 2-3 weeks. Custom builds may take 4-6 weeks depending on component availability and customization requirements. We'll keep you updated throughout the process.</p>
+                    </details>
+
+                    <details class="faq-item fade-in-up stagger-4">
+                        <summary>What warranty do you provide?</summary>
+                        <p>All MonkiiBoard keyboards come with a 1-year warranty covering manufacturing defects. We also offer lifetime support for troubleshooting and maintenance guidance.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply to Us Section -->
+        <section class="apply-section">
+            <div class="apply-video-background">
+                <video class="apply-bg-video" autoplay loop muted playsinline>
+                    <source src="assets/Video/customer_keyboard_test.mp4" type="video/mp4">
+                </video>
+                <div class="apply-video-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="apply-content-box fade-in-up">
+                    <span class="section-label">JOIN OUR TEAM</span>
+                    <h2 class="apply-title">Passionate About Keyboards?</h2>
+                    <p class="apply-description">
+                        We're always looking for talented individuals who share our passion for mechanical keyboards. 
+                        Whether you're a PCB designer, firmware developer, content creator, or customer support specialist, 
+                        we'd love to hear from you.
+                    </p>
+                    <div class="apply-perks">
+                        <div class="perk-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>Flexible Work Environment</span>
+                        </div>
+                        <div class="perk-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>Work with Cutting-Edge Tech</span>
+                        </div>
+                        <div class="perk-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>Support Communities in Need of Peripherals</span>
+                        </div>
+                        <div class="perk-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>Creative Freedom</span>
+                        </div>
+                    </div>
+                    <button class="apply-google-form-btn" onclick="window.open('https://forms.gle/JPd1u5SrboAcBPis5', '_blank')">
+                        Apply Now
+                    </button>
                 </div>
             </div>
         </section>

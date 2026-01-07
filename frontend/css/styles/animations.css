@@ -1,0 +1,109 @@
+/* Scroll Animations */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Active states when elements are in view */
+.fade-in.active,
+.fade-in-up.active,
+.fade-in-left.active,
+.fade-in-right.active,
+.fade-in-scale.active {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Staggered animation delays for grid items */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+.stagger-7 { transition-delay: 0.7s; }
+
+/* Hero section animations */
+.hero-content > * {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.hero-content.loaded > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-content.loaded .hero-tagline {
+    animation: fadeInUp 0.8s ease-out 0.1s forwards;
+}
+
+.hero-content.loaded .hero-title {
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.hero-content.loaded .hero-description {
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+}
+
+.hero-content.loaded .hero-cta {
+    animation: fadeInUp 0.8s ease-out 0.7s forwards;
+}
+
+.hero-images {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.hero-images.loaded {
+    animation: fadeInScale 1s ease-out 0.4s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent animation on initial page load for elements below fold */
+.no-animate {
+    transition: none !important;
+    animation: none !important;
+}
